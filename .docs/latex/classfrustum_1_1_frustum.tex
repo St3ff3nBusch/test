@@ -1,0 +1,137 @@
+\hypertarget{classfrustum_1_1_frustum}{}\doxysection{frustum\+::Frustum Class Reference}
+\label{classfrustum_1_1_frustum}\index{frustum::Frustum@{frustum::Frustum}}
+
+
+Represents a frustum in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Frustum.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfrustum_1_1_frustum_af2a026e035e8a546f7c2c2cd16914e16}\label{classfrustum_1_1_frustum_af2a026e035e8a546f7c2c2cd16914e16}} 
+\mbox{\hyperlink{classfrustum_1_1_frustum_af2a026e035e8a546f7c2c2cd16914e16}{Frustum}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classfrustum_1_1_frustum}{Frustum}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfrustum_1_1_frustum_a4ee686ebcb70a0f52f1f3d51c3597009}{Frustum}} (cv\+::\+Mat camera\+\_\+intrinsic\+\_\+matrix, int image\+\_\+rows=900, int image\+\_\+cols=1600)
+\begin{DoxyCompactList}\small\item\em Constructor with camera intrinsic matrix, image rows, and image columns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_frustum_acabedbd9237bcd4949f972b04d71f238}\label{classfrustum_1_1_frustum_acabedbd9237bcd4949f972b04d71f238}} 
+virtual \mbox{\hyperlink{classfrustum_1_1_frustum_acabedbd9237bcd4949f972b04d71f238}{$\sim$\+Frustum}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classfrustum_1_1_frustum}{Frustum}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classfrustum_1_1_frustum_ac2a6865e9f138533ae2295dfc9c52adb}{culling}} (std\+::vector$<$ std\+::pair$<$ cv\+::\+Point3d, cv\+::\+Point3d $>$$>$ \&lines) const
+\begin{DoxyCompactList}\small\item\em Filters valid lines. A line is valid if at least one point is within the frustum. The other point is set to the plane intersecting point. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classfrustum_1_1_frustum_aa0f77814d229f664b497ebd4f76cebbe}{plane\+\_\+line\+\_\+intersection}} (const cv\+::\+Point3d \&start\+Point, const cv\+::\+Point3d \&end\+Point, const \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} \&plane, cv\+::\+Point3d \&intersecting\+Point) const
+\begin{DoxyCompactList}\small\item\em Check if a line intersects with a plane. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Point3d $>$ }\\bool \mbox{\hyperlink{classfrustum_1_1_frustum_aceb07f249ea626fbf234416e4a661abe}{within\+\_\+frustum}} (const Point3d \&p) const
+\begin{DoxyCompactList}\small\item\em Check if a point is within the frustum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfrustum_1_1_frustum_a883d5ee8a268769a6a3ba5d4515a9aa2}\label{classfrustum_1_1_frustum_a883d5ee8a268769a6a3ba5d4515a9aa2}} 
+std\+::vector$<$ \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} $>$ \mbox{\hyperlink{classfrustum_1_1_frustum_a883d5ee8a268769a6a3ba5d4515a9aa2}{planes}}
+\begin{DoxyCompactList}\small\item\em The planes that define the frustum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_frustum_aa002b71e49df349578055b0b0842322b}\label{classfrustum_1_1_frustum_aa002b71e49df349578055b0b0842322b}} 
+double \mbox{\hyperlink{classfrustum_1_1_frustum_aa002b71e49df349578055b0b0842322b}{near}}
+\begin{DoxyCompactList}\small\item\em The near plane distance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_frustum_ad0f3c69c8f06c0e0213dde35fe37ba47}\label{classfrustum_1_1_frustum_ad0f3c69c8f06c0e0213dde35fe37ba47}} 
+double \mbox{\hyperlink{classfrustum_1_1_frustum_ad0f3c69c8f06c0e0213dde35fe37ba47}{far}}
+\begin{DoxyCompactList}\small\item\em The far plane distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a frustum in 3D space. 
+
+The \mbox{\hyperlink{classfrustum_1_1_frustum}{Frustum}} class defines a frustum using a set of planes. It provides functionality to check if points and lines are within the frustum and to filter lines based on their intersection with the frustum. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfrustum_1_1_frustum_a4ee686ebcb70a0f52f1f3d51c3597009}\label{classfrustum_1_1_frustum_a4ee686ebcb70a0f52f1f3d51c3597009}} 
+\index{frustum::Frustum@{frustum::Frustum}!Frustum@{Frustum}}
+\index{Frustum@{Frustum}!frustum::Frustum@{frustum::Frustum}}
+\doxysubsubsection{\texorpdfstring{Frustum()}{Frustum()}}
+{\footnotesize\ttfamily frustum\+::\+Frustum\+::\+Frustum (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{camera\+\_\+intrinsic\+\_\+matrix,  }\item[{int}]{image\+\_\+rows = {\ttfamily 900},  }\item[{int}]{image\+\_\+cols = {\ttfamily 1600} }\end{DoxyParamCaption})}
+
+
+
+Constructor with camera intrinsic matrix, image rows, and image columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+\_\+intrinsic\+\_\+matrix} & The intrinsic camera matrix. \\
+\hline
+{\em image\+\_\+rows} & The number of image rows. \\
+\hline
+{\em image\+\_\+cols} & The number of image columns. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfrustum_1_1_frustum_ac2a6865e9f138533ae2295dfc9c52adb}\label{classfrustum_1_1_frustum_ac2a6865e9f138533ae2295dfc9c52adb}} 
+\index{frustum::Frustum@{frustum::Frustum}!culling@{culling}}
+\index{culling@{culling}!frustum::Frustum@{frustum::Frustum}}
+\doxysubsubsection{\texorpdfstring{culling()}{culling()}}
+{\footnotesize\ttfamily bool frustum\+::\+Frustum\+::culling (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ cv\+::\+Point3d, cv\+::\+Point3d $>$$>$ \&}]{lines }\end{DoxyParamCaption}) const}
+
+
+
+Filters valid lines. A line is valid if at least one point is within the frustum. The other point is set to the plane intersecting point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & The lines to filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there are valid lines, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfrustum_1_1_frustum_aa0f77814d229f664b497ebd4f76cebbe}\label{classfrustum_1_1_frustum_aa0f77814d229f664b497ebd4f76cebbe}} 
+\index{frustum::Frustum@{frustum::Frustum}!plane\_line\_intersection@{plane\_line\_intersection}}
+\index{plane\_line\_intersection@{plane\_line\_intersection}!frustum::Frustum@{frustum::Frustum}}
+\doxysubsubsection{\texorpdfstring{plane\_line\_intersection()}{plane\_line\_intersection()}}
+{\footnotesize\ttfamily bool frustum\+::\+Frustum\+::plane\+\_\+line\+\_\+intersection (\begin{DoxyParamCaption}\item[{const cv\+::\+Point3d \&}]{start\+Point,  }\item[{const cv\+::\+Point3d \&}]{end\+Point,  }\item[{const \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} \&}]{plane,  }\item[{cv\+::\+Point3d \&}]{intersecting\+Point }\end{DoxyParamCaption}) const}
+
+
+
+Check if a line intersects with a plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Point} & The start point of the line. \\
+\hline
+{\em end\+Point} & The end point of the line. \\
+\hline
+{\em plane} & The plane to check intersection with. \\
+\hline
+{\em intersecting\+Point} & The point of intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the line intersects with the plane, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfrustum_1_1_frustum_aceb07f249ea626fbf234416e4a661abe}\label{classfrustum_1_1_frustum_aceb07f249ea626fbf234416e4a661abe}} 
+\index{frustum::Frustum@{frustum::Frustum}!within\_frustum@{within\_frustum}}
+\index{within\_frustum@{within\_frustum}!frustum::Frustum@{frustum::Frustum}}
+\doxysubsubsection{\texorpdfstring{within\_frustum()}{within\_frustum()}}
+{\footnotesize\ttfamily template$<$class Point3d $>$ \\
+bool frustum\+::\+Frustum\+::within\+\_\+frustum (\begin{DoxyParamCaption}\item[{const Point3d \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if a point is within the frustum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is within the frustum, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/Frustum.\+h\item 
+src/model/Frustum.\+cpp\end{DoxyCompactItemize}

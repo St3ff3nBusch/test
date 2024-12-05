@@ -1,0 +1,737 @@
+\hypertarget{classikg_1_1_labeling_presenter}{}\doxysection{ikg\+::Labeling\+Presenter Class Reference}
+\label{classikg_1_1_labeling_presenter}\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+
+
+Manages the interaction between the \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} model and the \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} view.  
+
+
+
+
+{\ttfamily \#include $<$Labeling\+Presenter.\+h$>$}
+
+Inheritance diagram for ikg\+::Labeling\+Presenter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classikg_1_1_labeling_presenter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a3d44c247e3b69e9dcb8ae0fa1ad9bbfa}\label{classikg_1_1_labeling_presenter_a3d44c247e3b69e9dcb8ae0fa1ad9bbfa}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a3d44c247e3b69e9dcb8ae0fa1ad9bbfa}{add\+\_\+obj}} ()
+\begin{DoxyCompactList}\small\item\em Adds a new object at the actual point cloud index by picking a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a54ee50fb669d72b31bc3874923acd3e5}{cam\+\_\+id\+\_\+change}} (int index, int cam\+Id)
+\begin{DoxyCompactList}\small\item\em Changes the current camera perspective per sliding window frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a78174d288208f89e37a0c7dbd512f89a}{cam\+\_\+global\+\_\+id\+\_\+change}} (const Q\+String \&index)
+\begin{DoxyCompactList}\small\item\em Changes the current camera perspective for the global view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ab91a9b65a722d2a0b74e6f9df03e1682}{check\+\_\+background}} (int check)
+\begin{DoxyCompactList}\small\item\em Triggers background subtraction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a01b0960669a7e8a8ba5c4d860488ff5c}{check\+\_\+color\+\_\+by\+\_\+class\+\_\+id}} (int check)
+\begin{DoxyCompactList}\small\item\em Triggers point cloud coloring by class ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ad0ad912bebd0b06db63d524d1d84a48a}{class\+\_\+id\+\_\+change}} (int id)
+\begin{DoxyCompactList}\small\item\em Changes the class ID of the active object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae1ec42f8d316a52c3d540c4a94493265}{context\+\_\+menu\+\_\+view\+\_\+table}} (Q\+Point pos)
+\begin{DoxyCompactList}\small\item\em Shows the context menu for single frame operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac51736ec5e926c3b595218350c5f61af}\label{classikg_1_1_labeling_presenter_ac51736ec5e926c3b595218350c5f61af}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac51736ec5e926c3b595218350c5f61af}{correct\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em Shifts the bounding box x-\/, y-\/coordinates and heading to fit better for all points within the bounding box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a34b6763352a2a32919875f60c0710bbb}\label{classikg_1_1_labeling_presenter_a34b6763352a2a32919875f60c0710bbb}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a34b6763352a2a32919875f60c0710bbb}{definalized\+\_\+object}} ()
+\begin{DoxyCompactList}\small\item\em Sets all positions of the actual object as non-\/finalized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a294141c0bf309bc8534c98251c536615}\label{classikg_1_1_labeling_presenter_a294141c0bf309bc8534c98251c536615}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a294141c0bf309bc8534c98251c536615}{delete\+\_\+intersecting\+\_\+bounding\+\_\+boxes}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all intersecting bounding boxes at the current time index via context menu, skipping finalized ones. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a81fbc7cbce6d20258d5160fc4c1673f7}\label{classikg_1_1_labeling_presenter_a81fbc7cbce6d20258d5160fc4c1673f7}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a81fbc7cbce6d20258d5160fc4c1673f7}{delete\+\_\+obj}} ()
+\begin{DoxyCompactList}\small\item\em Deletes an object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ad09794b846215b2dbb2db4479ceecb66}\label{classikg_1_1_labeling_presenter_ad09794b846215b2dbb2db4479ceecb66}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ad09794b846215b2dbb2db4479ceecb66}{delete\+\_\+pose}} ()
+\begin{DoxyCompactList}\small\item\em Deletes a single pose by context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aa837c4bb5b40d169f976b97a7a3b4a2d}\label{classikg_1_1_labeling_presenter_aa837c4bb5b40d169f976b97a7a3b4a2d}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aa837c4bb5b40d169f976b97a7a3b4a2d}{duplicate}} ()
+\begin{DoxyCompactList}\small\item\em Duplicates a track with different shift options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aaa14f7440ef253db46beaa32ee52c725}\label{classikg_1_1_labeling_presenter_aaa14f7440ef253db46beaa32ee52c725}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aaa14f7440ef253db46beaa32ee52c725}{extrapolate}} ()
+\begin{DoxyCompactList}\small\item\em Extrapolates a track to the chosen time step via context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a23fca7475c457683660419208a2ad88b}\label{classikg_1_1_labeling_presenter_a23fca7475c457683660419208a2ad88b}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a23fca7475c457683660419208a2ad88b}{extrapolate\+\_\+static}} ()
+\begin{DoxyCompactList}\small\item\em Extrapolates a track with a static pose to the chosen time step via context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_adbec9d06c0c8fe84e6fdfac68f7c91ab}\label{classikg_1_1_labeling_presenter_adbec9d06c0c8fe84e6fdfac68f7c91ab}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_adbec9d06c0c8fe84e6fdfac68f7c91ab}{fill\+\_\+global\+\_\+camera\+\_\+index}} ()
+\begin{DoxyCompactList}\small\item\em Updates the combo box for global camera I\+Ds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aaff7aa659a34319be3411bac4efbc2ef}\label{classikg_1_1_labeling_presenter_aaff7aa659a34319be3411bac4efbc2ef}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aaff7aa659a34319be3411bac4efbc2ef}{fill\+\_\+pc\+\_\+indices}} ()
+\begin{DoxyCompactList}\small\item\em Updates the combo box for point cloud indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aa12b67ee42a07fdf750c22a0e2b224e9}\label{classikg_1_1_labeling_presenter_aa12b67ee42a07fdf750c22a0e2b224e9}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aa12b67ee42a07fdf750c22a0e2b224e9}{finalize\+\_\+pose}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes a single pose by context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae363404ef38aa45724ae2f434324e0fe}\label{classikg_1_1_labeling_presenter_ae363404ef38aa45724ae2f434324e0fe}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae363404ef38aa45724ae2f434324e0fe}{finalized\+\_\+object}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes the complete track for the active object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ad7290d83857ed708da3ea108c9b8f410}\label{classikg_1_1_labeling_presenter_ad7290d83857ed708da3ea108c9b8f410}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ad7290d83857ed708da3ea108c9b8f410}{generate\+\_\+model}} ()
+\begin{DoxyCompactList}\small\item\em Generates a convex hull of the object by aggregating points within the track bounding boxes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aa75a7ec8f0052928ac9eace415dc3238}\label{classikg_1_1_labeling_presenter_aa75a7ec8f0052928ac9eace415dc3238}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aa75a7ec8f0052928ac9eace415dc3238}{generate\+\_\+video}} ()
+\begin{DoxyCompactList}\small\item\em Saves a video for the current camera by choosing start time, end time, and frame rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a1dc1305431b0af96ce65eb9a010902bc}{heading\+\_\+value\+\_\+change}} (int c)
+\begin{DoxyCompactList}\small\item\em Adapts the heading spin box, controls circular value, and fixes finalized headings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aa7c5b9d658c879cd0c4f3726c1b9c185}\label{classikg_1_1_labeling_presenter_aa7c5b9d658c879cd0c4f3726c1b9c185}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aa7c5b9d658c879cd0c4f3726c1b9c185}{interpolate}} ()
+\begin{DoxyCompactList}\small\item\em Interpolates a single pose via context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a9157f68671e8ccb55e4a2e1b5651208c}\label{classikg_1_1_labeling_presenter_a9157f68671e8ccb55e4a2e1b5651208c}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a9157f68671e8ccb55e4a2e1b5651208c}{interpolate\+\_\+between\+\_\+key\+\_\+frames}} ()
+\begin{DoxyCompactList}\small\item\em Interpolates all positions between key frames for all non-\/finalized objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a05d2444bb95ff49cd41c40740a8beb23}\label{classikg_1_1_labeling_presenter_a05d2444bb95ff49cd41c40740a8beb23}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a05d2444bb95ff49cd41c40740a8beb23}{invert\+\_\+heading}} ()
+\begin{DoxyCompactList}\small\item\em Inverts the current heading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a7a63924cb1fce4a8185792874a8861b4}\label{classikg_1_1_labeling_presenter_a7a63924cb1fce4a8185792874a8861b4}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a7a63924cb1fce4a8185792874a8861b4}{invert\+\_\+all\+\_\+headings}} ()
+\begin{DoxyCompactList}\small\item\em Inverts the headings of the complete trajectory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a74f7d94a0b35ebc6ce3c979ede722b4d}\label{classikg_1_1_labeling_presenter_a74f7d94a0b35ebc6ce3c979ede722b4d}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a74f7d94a0b35ebc6ce3c979ede722b4d}{load}} ()
+\begin{DoxyCompactList}\small\item\em Loads data paths, meta data, and trajectories. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac311eb227b89b8fb18b5eea5acb8e341}\label{classikg_1_1_labeling_presenter_ac311eb227b89b8fb18b5eea5acb8e341}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac311eb227b89b8fb18b5eea5acb8e341}{mark\+\_\+intervall\+\_\+as\+\_\+standing}} ()
+\begin{DoxyCompactList}\small\item\em Marks all positions between a start and end index as standing and sets its pose to the starting pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a0fa891699e440826ed8174f7d75750c0}\label{classikg_1_1_labeling_presenter_a0fa891699e440826ed8174f7d75750c0}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a0fa891699e440826ed8174f7d75750c0}{mark\+\_\+pose\+\_\+as\+\_\+standing}} ()
+\begin{DoxyCompactList}\small\item\em Marks a single pose as a standing pose via context menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a07f4cae2049eec262a27b66b539b418b}\label{classikg_1_1_labeling_presenter_a07f4cae2049eec262a27b66b539b418b}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a07f4cae2049eec262a27b66b539b418b}{merge\+\_\+intersection}} ()
+\begin{DoxyCompactList}\small\item\em Merges intersecting objects at the current point cloud index into the active track, keeping active track positions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a6c9768577563780a498f1623d6b4a8dd}\label{classikg_1_1_labeling_presenter_a6c9768577563780a498f1623d6b4a8dd}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a6c9768577563780a498f1623d6b4a8dd}{merge\+\_\+trajectories}} ()
+\begin{DoxyCompactList}\small\item\em Merges tracks by choosing track I\+Ds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a0df3e35c82753a81b7dcad50573bb811}\label{classikg_1_1_labeling_presenter_a0df3e35c82753a81b7dcad50573bb811}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a0df3e35c82753a81b7dcad50573bb811}{next\+\_\+point\+\_\+cloud}} ()
+\begin{DoxyCompactList}\small\item\em Shows the next point cloud, incrementing the point cloud with the actual step size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae0df451242af1d4fa84c67f5670de760}{obj\+\_\+id\+\_\+change}} (const Q\+String \&index)
+\begin{DoxyCompactList}\small\item\em Changes the active object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a47ccc4af72b47f8b66a13d9e302819c7}{point\+\_\+cloud\+\_\+index\+\_\+change}} (const Q\+String \&index)
+\begin{DoxyCompactList}\small\item\em Updates the view to the point cloud index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a33a2d9e5788c222337fbc57da9073005}{point\+\_\+size\+\_\+change}} (double size)
+\begin{DoxyCompactList}\small\item\em Changes the point size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a276e3193e3f2b32f78d73258a9d37171}\label{classikg_1_1_labeling_presenter_a276e3193e3f2b32f78d73258a9d37171}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a276e3193e3f2b32f78d73258a9d37171}{previouse\+\_\+point\+\_\+cloud}} ()
+\begin{DoxyCompactList}\small\item\em Shows the previous point cloud, decrementing the point cloud with the actual step size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ab8a3c53c30868956183a97f6296a1f3e}\label{classikg_1_1_labeling_presenter_ab8a3c53c30868956183a97f6296a1f3e}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ab8a3c53c30868956183a97f6296a1f3e}{render\+\_\+glob\+View}} ()
+\begin{DoxyCompactList}\small\item\em Renders the point cloud and bounding box for the actual point cloud index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ab7b9d616215b40bbe24c150024330277}\label{classikg_1_1_labeling_presenter_ab7b9d616215b40bbe24c150024330277}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ab7b9d616215b40bbe24c150024330277}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves trajectories. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac8bd356758da4c1f38cf61574d703647}\label{classikg_1_1_labeling_presenter_ac8bd356758da4c1f38cf61574d703647}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac8bd356758da4c1f38cf61574d703647}{split\+\_\+at\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Splits a track at a time into two successive tracks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a86bf0179d3f07c8d5198f795f77c4ae1}{step\+\_\+size\+\_\+change}} (int index)
+\begin{DoxyCompactList}\small\item\em Changes the point cloud index step size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aa73dac9ad9902c9767ba7a0c95b7264c}{update\+\_\+back\+\_\+view}} (int index, bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates the back view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a1bfb90fa9cf9979991ef0b1db68480fc}\label{classikg_1_1_labeling_presenter_a1bfb90fa9cf9979991ef0b1db68480fc}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a1bfb90fa9cf9979991ef0b1db68480fc}{update\+\_\+bounding\+\_\+box\+\_\+dimensions}} ()
+\begin{DoxyCompactList}\small\item\em Updates the bounding box dimensions by value change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac87ec60af25f857a638dd112a81e9aeb}{update\+\_\+cam\+\_\+view}} (int index, bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates the camera view of the operation cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a21eaa122d83bf9cdc23888fdca044d92}\label{classikg_1_1_labeling_presenter_a21eaa122d83bf9cdc23888fdca044d92}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a21eaa122d83bf9cdc23888fdca044d92}{update\+\_\+global}} ()
+\begin{DoxyCompactList}\small\item\em Updates the global view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_aff404548988abb8c25722f5e27d501f1}{update\+\_\+heading}} (int i, double heading)
+\begin{DoxyCompactList}\small\item\em Updates the heading for the operation cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a2d2ed912d2e9c12d39578af4dde69d04}\label{classikg_1_1_labeling_presenter_a2d2ed912d2e9c12d39578af4dde69d04}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a2d2ed912d2e9c12d39578af4dde69d04}{update\+\_\+model\+\_\+view}} ()
+\begin{DoxyCompactList}\small\item\em Renders points at the convex hull of aggregated points for the active object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a37703689823c641bc6671b84b13ea156}{update\+\_\+object\+\_\+ids}} (Q\+Combo\+Box $\ast$box)
+\begin{DoxyCompactList}\small\item\em Updates the combo box for object I\+Ds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae2430bcf5c04793ceca0f64233378c2f}{update\+\_\+side\+\_\+view}} (int index, bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates the side view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a9024074580806978a40a743c5041f4ac}{update\+\_\+single\+\_\+trajectory\+\_\+view}} (int obj\+Id)
+\begin{DoxyCompactList}\small\item\em Updates the single trajectory view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae8a262860b8c3eec4c29f4589e2240e2}{update\+\_\+top\+\_\+view}} (int index, bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates the top view. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a85f45a47e9dda39d2f1fdb9f7cad72c9}{point\+\_\+picking\+\_\+callback}} (const pcl\+::visualization\+::\+Point\+Picking\+Event \&event, void $\ast$args)
+\begin{DoxyCompactList}\small\item\em Callback function for point picking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classikg_1_1_labeling_presenter_a3b4fba9cd843fe468cae76770dc941cf}{Labeling\+Presenter}} (\mbox{\hyperlink{classikg_1_1_labeling_view}{Labeling\+View}} $\ast$\mbox{\hyperlink{classikg_1_1_labeling_presenter_ad4bb548d3171533aa758c5c2ac1f69b7}{view}})
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classikg_1_1_labeling_presenter}{Labeling\+Presenter}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a9ba455df50a9e5ca33c1544bb01aa7ec}\label{classikg_1_1_labeling_presenter_a9ba455df50a9e5ca33c1544bb01aa7ec}} 
+virtual \mbox{\hyperlink{classikg_1_1_labeling_presenter_a9ba455df50a9e5ca33c1544bb01aa7ec}{$\sim$\+Labeling\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classikg_1_1_labeling_presenter}{Labeling\+Presenter}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_labeling_presenter_a2b5ca9bdb401a602f03d2470d543b791}{event\+Filter}} (Q\+Object $\ast$obj, Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event filter to enable zooming, shifting, and rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a553f910689ec49159c49ba0a73bfbccd}{connect\+\_\+view\+\_\+elements}} (\mbox{\hyperlink{classikg_1_1_labeling_view}{Labeling\+View}} $\ast$\mbox{\hyperlink{classikg_1_1_labeling_presenter_ad4bb548d3171533aa758c5c2ac1f69b7}{view}})
+\begin{DoxyCompactList}\small\item\em Connects all view elements via this presenter function to the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a19735e4182a4eb8d6b998b7968a16ba2}\label{classikg_1_1_labeling_presenter_a19735e4182a4eb8d6b998b7968a16ba2}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a19735e4182a4eb8d6b998b7968a16ba2}{fill\+\_\+view}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all views at loading and G\+UI resizing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a8cc77b638efa23f21ac4657454d3c846}\label{classikg_1_1_labeling_presenter_a8cc77b638efa23f21ac4657454d3c846}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a8cc77b638efa23f21ac4657454d3c846}{fill\+\_\+operation\+\_\+table}} ()
+\begin{DoxyCompactList}\small\item\em Fills the operation table with the sliding window views for the label action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_labeling_presenter_a951f4ce4efcf596bf7dfd32c68e6c58c}{handel\+\_\+camera\+\_\+view\+\_\+event}} (Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Handles camera view events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_labeling_presenter_a0e509dae88d6651448a25aeae3be4ff7}{handel\+\_\+operation\+\_\+cell\+\_\+event}} (int i, int l, Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Handles operation cell events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac4f009d5f0ab3b349c55dbe2690b14d2}{handel\+\_\+global\+\_\+trajectory\+\_\+event}} (Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Handles global trajectory view events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_labeling_presenter_a69e01ea20f0f498aa9d9bb75d988e1af}{handel\+\_\+single\+\_\+trajectory\+\_\+event}} (Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Handles single trajectory view events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a097bff384b06a65f8902eab89e84bb71}\label{classikg_1_1_labeling_presenter_a097bff384b06a65f8902eab89e84bb71}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a097bff384b06a65f8902eab89e84bb71}{update\+\_\+glob\+\_\+cam\+\_\+view}} ()
+\begin{DoxyCompactList}\small\item\em Updates the global camera view. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classikg_1_1_labeling_presenter_ac5434fe4a924cfbabb3fced9869b5ed1}{update\+\_\+view\+\_\+column}} (int i, bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates a single operation column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ab6b59625edb9e5f6621bbdafc1bb7b6d}{update\+\_\+operation\+\_\+views}} (bool refresh=false)
+\begin{DoxyCompactList}\small\item\em Updates all operation views. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a3ffa1db266b3d9eabae4dd6702b5af64}{update\+\_\+zoom\+\_\+factor\+\_\+operation\+\_\+cell}} (int row, double s, int index)
+\begin{DoxyCompactList}\small\item\em Sets the zoom factor for the operation view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a6eeba38d8d3078d7276601e087842f00}\label{classikg_1_1_labeling_presenter_a6eeba38d8d3078d7276601e087842f00}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a6eeba38d8d3078d7276601e087842f00}{set\+\_\+box\+\_\+dimension}} ()
+\begin{DoxyCompactList}\small\item\em Updates the G\+UI at object change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae7007e3d9875cfe7e1f2e09f992c5877}\label{classikg_1_1_labeling_presenter_ae7007e3d9875cfe7e1f2e09f992c5877}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ae7007e3d9875cfe7e1f2e09f992c5877}{set\+\_\+class\+\_\+combo\+\_\+box}} ()
+\begin{DoxyCompactList}\small\item\em Sets the class combo box at object change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ab912d3843ce7ab319e4865e796aa55bf}\label{classikg_1_1_labeling_presenter_ab912d3843ce7ab319e4865e796aa55bf}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_ab912d3843ce7ab319e4865e796aa55bf}{set\+\_\+model\+\_\+view\+\_\+dimensions}} ()
+\begin{DoxyCompactList}\small\item\em Sets the model image sizes for view generation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a28043d23eee318bcbebf5ca06eb0b5d1}\label{classikg_1_1_labeling_presenter_a28043d23eee318bcbebf5ca06eb0b5d1}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a28043d23eee318bcbebf5ca06eb0b5d1}{set\+\_\+object\+\_\+id\+\_\+combo\+\_\+box}} ()
+\begin{DoxyCompactList}\small\item\em Updates the object ID combo box at object change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a746f061eee25fbe1112bbe21bc400e4c}\label{classikg_1_1_labeling_presenter_a746f061eee25fbe1112bbe21bc400e4c}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a746f061eee25fbe1112bbe21bc400e4c}{set\+\_\+point\+\_\+cloud\+\_\+index\+\_\+to\+\_\+first\+\_\+obj\+\_\+occurence}} ()
+\begin{DoxyCompactList}\small\item\em Sets the point cloud index to the first object occurrence at object change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_a7ba7aa4f433614eca228274edb5f8368}{shift\+\_\+pose}} (cv\+::\+Point2d t, \mbox{\hyperlink{classikg_1_1_pose}{Pose}} $\ast$pose, int column)
+\begin{DoxyCompactList}\small\item\em Shifts the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_abbdb2ba81186d09d4fb77e37e065291d}\label{classikg_1_1_labeling_presenter_abbdb2ba81186d09d4fb77e37e065291d}} 
+void \mbox{\hyperlink{classikg_1_1_labeling_presenter_abbdb2ba81186d09d4fb77e37e065291d}{recolor\+\_\+sliding\+\_\+window\+\_\+point\+\_\+clouds}} ()
+\begin{DoxyCompactList}\small\item\em Recolors the sliding window point clouds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a3429ccdefc6c4309b3ca2d7a29a890eb}\label{classikg_1_1_labeling_presenter_a3429ccdefc6c4309b3ca2d7a29a890eb}} 
+\mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} \mbox{\hyperlink{classikg_1_1_labeling_presenter_a3429ccdefc6c4309b3ca2d7a29a890eb}{model}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ad4bb548d3171533aa758c5c2ac1f69b7}\label{classikg_1_1_labeling_presenter_ad4bb548d3171533aa758c5c2ac1f69b7}} 
+\mbox{\hyperlink{classikg_1_1_labeling_view}{Labeling\+View}} $\ast$ \mbox{\hyperlink{classikg_1_1_labeling_presenter_ad4bb548d3171533aa758c5c2ac1f69b7}{view}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aaaec9dd3ced3399f3c83c2ce66140139}\label{classikg_1_1_labeling_presenter_aaaec9dd3ced3399f3c83c2ce66140139}} 
+int \mbox{\hyperlink{classikg_1_1_labeling_presenter_aaaec9dd3ced3399f3c83c2ce66140139}{active\+View\+Row}}
+\begin{DoxyCompactList}\small\item\em Marks the operation cell with the mouse cursor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a60d724b97656b28095367cc0cd4d6a27}\label{classikg_1_1_labeling_presenter_a60d724b97656b28095367cc0cd4d6a27}} 
+int {\bfseries active\+View\+Col}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the interaction between the \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} model and the \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} view. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a3b4fba9cd843fe468cae76770dc941cf}\label{classikg_1_1_labeling_presenter_a3b4fba9cd843fe468cae76770dc941cf}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!LabelingPresenter@{LabelingPresenter}}
+\index{LabelingPresenter@{LabelingPresenter}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{LabelingPresenter()}{LabelingPresenter()}}
+{\footnotesize\ttfamily ikg\+::\+Labeling\+Presenter\+::\+Labeling\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classikg_1_1_labeling_view}{Labeling\+View}} $\ast$}]{view }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classikg_1_1_labeling_presenter}{Labeling\+Presenter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} view. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a78174d288208f89e37a0c7dbd512f89a}\label{classikg_1_1_labeling_presenter_a78174d288208f89e37a0c7dbd512f89a}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!cam\_global\_id\_change@{cam\_global\_id\_change}}
+\index{cam\_global\_id\_change@{cam\_global\_id\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{cam\_global\_id\_change}{cam\_global\_id\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::cam\+\_\+global\+\_\+id\+\_\+change (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the current camera perspective for the global view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the camera. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a54ee50fb669d72b31bc3874923acd3e5}\label{classikg_1_1_labeling_presenter_a54ee50fb669d72b31bc3874923acd3e5}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!cam\_id\_change@{cam\_id\_change}}
+\index{cam\_id\_change@{cam\_id\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{cam\_id\_change}{cam\_id\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::cam\+\_\+id\+\_\+change (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{cam\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the current camera perspective per sliding window frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the camera. \\
+\hline
+{\em cam\+Id} & The ID of the camera. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ab91a9b65a722d2a0b74e6f9df03e1682}\label{classikg_1_1_labeling_presenter_ab91a9b65a722d2a0b74e6f9df03e1682}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!check\_background@{check\_background}}
+\index{check\_background@{check\_background}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{check\_background}{check\_background}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::check\+\_\+background (\begin{DoxyParamCaption}\item[{int}]{check }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Triggers background subtraction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em check} & The state of the checkbox. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a01b0960669a7e8a8ba5c4d860488ff5c}\label{classikg_1_1_labeling_presenter_a01b0960669a7e8a8ba5c4d860488ff5c}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!check\_color\_by\_class\_id@{check\_color\_by\_class\_id}}
+\index{check\_color\_by\_class\_id@{check\_color\_by\_class\_id}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{check\_color\_by\_class\_id}{check\_color\_by\_class\_id}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::check\+\_\+color\+\_\+by\+\_\+class\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{check }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Triggers point cloud coloring by class ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em check} & The state of the checkbox. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ad0ad912bebd0b06db63d524d1d84a48a}\label{classikg_1_1_labeling_presenter_ad0ad912bebd0b06db63d524d1d84a48a}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!class\_id\_change@{class\_id\_change}}
+\index{class\_id\_change@{class\_id\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{class\_id\_change}{class\_id\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::class\+\_\+id\+\_\+change (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the class ID of the active object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The new class ID. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a553f910689ec49159c49ba0a73bfbccd}\label{classikg_1_1_labeling_presenter_a553f910689ec49159c49ba0a73bfbccd}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!connect\_view\_elements@{connect\_view\_elements}}
+\index{connect\_view\_elements@{connect\_view\_elements}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{connect\_view\_elements()}{connect\_view\_elements()}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::connect\+\_\+view\+\_\+elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classikg_1_1_labeling_view}{Labeling\+View}} $\ast$}]{view }\end{DoxyParamCaption})}
+
+
+
+Connects all view elements via this presenter function to the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The \mbox{\hyperlink{classikg_1_1_labeling}{Labeling}} view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae1ec42f8d316a52c3d540c4a94493265}\label{classikg_1_1_labeling_presenter_ae1ec42f8d316a52c3d540c4a94493265}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!context\_menu\_view\_table@{context\_menu\_view\_table}}
+\index{context\_menu\_view\_table@{context\_menu\_view\_table}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{context\_menu\_view\_table}{context\_menu\_view\_table}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::context\+\_\+menu\+\_\+view\+\_\+table (\begin{DoxyParamCaption}\item[{Q\+Point}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Shows the context menu for single frame operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position where the context menu should appear. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a2b5ca9bdb401a602f03d2470d543b791}\label{classikg_1_1_labeling_presenter_a2b5ca9bdb401a602f03d2470d543b791}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!eventFilter@{eventFilter}}
+\index{eventFilter@{eventFilter}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{eventFilter()}{eventFilter()}}
+{\footnotesize\ttfamily bool ikg\+::\+Labeling\+Presenter\+::event\+Filter (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{obj,  }\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Event filter to enable zooming, shifting, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to filter events for. \\
+\hline
+{\em event} & The event to filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a951f4ce4efcf596bf7dfd32c68e6c58c}\label{classikg_1_1_labeling_presenter_a951f4ce4efcf596bf7dfd32c68e6c58c}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!handel\_camera\_view\_event@{handel\_camera\_view\_event}}
+\index{handel\_camera\_view\_event@{handel\_camera\_view\_event}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{handel\_camera\_view\_event()}{handel\_camera\_view\_event()}}
+{\footnotesize\ttfamily bool ikg\+::\+Labeling\+Presenter\+::handel\+\_\+camera\+\_\+view\+\_\+event (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles camera view events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac4f009d5f0ab3b349c55dbe2690b14d2}\label{classikg_1_1_labeling_presenter_ac4f009d5f0ab3b349c55dbe2690b14d2}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!handel\_global\_trajectory\_event@{handel\_global\_trajectory\_event}}
+\index{handel\_global\_trajectory\_event@{handel\_global\_trajectory\_event}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{handel\_global\_trajectory\_event()}{handel\_global\_trajectory\_event()}}
+{\footnotesize\ttfamily bool ikg\+::\+Labeling\+Presenter\+::handel\+\_\+global\+\_\+trajectory\+\_\+event (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles global trajectory view events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a0e509dae88d6651448a25aeae3be4ff7}\label{classikg_1_1_labeling_presenter_a0e509dae88d6651448a25aeae3be4ff7}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!handel\_operation\_cell\_event@{handel\_operation\_cell\_event}}
+\index{handel\_operation\_cell\_event@{handel\_operation\_cell\_event}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{handel\_operation\_cell\_event()}{handel\_operation\_cell\_event()}}
+{\footnotesize\ttfamily bool ikg\+::\+Labeling\+Presenter\+::handel\+\_\+operation\+\_\+cell\+\_\+event (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{l,  }\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles operation cell events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The row index of the cell. \\
+\hline
+{\em l} & The column index of the cell. \\
+\hline
+{\em event} & The event to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a69e01ea20f0f498aa9d9bb75d988e1af}\label{classikg_1_1_labeling_presenter_a69e01ea20f0f498aa9d9bb75d988e1af}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!handel\_single\_trajectory\_event@{handel\_single\_trajectory\_event}}
+\index{handel\_single\_trajectory\_event@{handel\_single\_trajectory\_event}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{handel\_single\_trajectory\_event()}{handel\_single\_trajectory\_event()}}
+{\footnotesize\ttfamily bool ikg\+::\+Labeling\+Presenter\+::handel\+\_\+single\+\_\+trajectory\+\_\+event (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles single trajectory view events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a1dc1305431b0af96ce65eb9a010902bc}\label{classikg_1_1_labeling_presenter_a1dc1305431b0af96ce65eb9a010902bc}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!heading\_value\_change@{heading\_value\_change}}
+\index{heading\_value\_change@{heading\_value\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{heading\_value\_change}{heading\_value\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::heading\+\_\+value\+\_\+change (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Adapts the heading spin box, controls circular value, and fixes finalized headings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The column index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae0df451242af1d4fa84c67f5670de760}\label{classikg_1_1_labeling_presenter_ae0df451242af1d4fa84c67f5670de760}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!obj\_id\_change@{obj\_id\_change}}
+\index{obj\_id\_change@{obj\_id\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{obj\_id\_change}{obj\_id\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::obj\+\_\+id\+\_\+change (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the active object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the new active object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a47ccc4af72b47f8b66a13d9e302819c7}\label{classikg_1_1_labeling_presenter_a47ccc4af72b47f8b66a13d9e302819c7}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!point\_cloud\_index\_change@{point\_cloud\_index\_change}}
+\index{point\_cloud\_index\_change@{point\_cloud\_index\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{point\_cloud\_index\_change}{point\_cloud\_index\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::point\+\_\+cloud\+\_\+index\+\_\+change (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the view to the point cloud index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The new point cloud index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a85f45a47e9dda39d2f1fdb9f7cad72c9}\label{classikg_1_1_labeling_presenter_a85f45a47e9dda39d2f1fdb9f7cad72c9}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!point\_picking\_callback@{point\_picking\_callback}}
+\index{point\_picking\_callback@{point\_picking\_callback}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{point\_picking\_callback}{point\_picking\_callback}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::point\+\_\+picking\+\_\+callback (\begin{DoxyParamCaption}\item[{const pcl\+::visualization\+::\+Point\+Picking\+Event \&}]{event,  }\item[{void $\ast$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [slot]}}
+
+
+
+Callback function for point picking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The point picking event. \\
+\hline
+{\em args} & Additional arguments. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a33a2d9e5788c222337fbc57da9073005}\label{classikg_1_1_labeling_presenter_a33a2d9e5788c222337fbc57da9073005}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!point\_size\_change@{point\_size\_change}}
+\index{point\_size\_change@{point\_size\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{point\_size\_change}{point\_size\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::point\+\_\+size\+\_\+change (\begin{DoxyParamCaption}\item[{double}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the point size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The new point size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a7ba7aa4f433614eca228274edb5f8368}\label{classikg_1_1_labeling_presenter_a7ba7aa4f433614eca228274edb5f8368}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!shift\_pose@{shift\_pose}}
+\index{shift\_pose@{shift\_pose}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{shift\_pose()}{shift\_pose()}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::shift\+\_\+pose (\begin{DoxyParamCaption}\item[{cv\+::\+Point2d}]{t,  }\item[{\mbox{\hyperlink{classikg_1_1_pose}{Pose}} $\ast$}]{pose,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Shifts the pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The translation vector. \\
+\hline
+{\em pose} & The pose to shift. \\
+\hline
+{\em column} & The column index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a86bf0179d3f07c8d5198f795f77c4ae1}\label{classikg_1_1_labeling_presenter_a86bf0179d3f07c8d5198f795f77c4ae1}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!step\_size\_change@{step\_size\_change}}
+\index{step\_size\_change@{step\_size\_change}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{step\_size\_change}{step\_size\_change}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::step\+\_\+size\+\_\+change (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Changes the point cloud index step size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The new step size index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aa73dac9ad9902c9767ba7a0c95b7264c}\label{classikg_1_1_labeling_presenter_aa73dac9ad9902c9767ba7a0c95b7264c}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_back\_view@{update\_back\_view}}
+\index{update\_back\_view@{update\_back\_view}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_back\_view}{update\_back\_view}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+back\+\_\+view (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the back view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the view to update. \\
+\hline
+{\em refresh} & Whether to refresh the view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac87ec60af25f857a638dd112a81e9aeb}\label{classikg_1_1_labeling_presenter_ac87ec60af25f857a638dd112a81e9aeb}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_cam\_view@{update\_cam\_view}}
+\index{update\_cam\_view@{update\_cam\_view}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_cam\_view}{update\_cam\_view}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+cam\+\_\+view (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the camera view of the operation cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the view to update. \\
+\hline
+{\em refresh} & Whether to refresh the view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_aff404548988abb8c25722f5e27d501f1}\label{classikg_1_1_labeling_presenter_aff404548988abb8c25722f5e27d501f1}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_heading@{update\_heading}}
+\index{update\_heading@{update\_heading}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_heading}{update\_heading}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+heading (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{double}]{heading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the heading for the operation cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the operation cell. \\
+\hline
+{\em heading} & The new heading value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a37703689823c641bc6671b84b13ea156}\label{classikg_1_1_labeling_presenter_a37703689823c641bc6671b84b13ea156}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_object\_ids@{update\_object\_ids}}
+\index{update\_object\_ids@{update\_object\_ids}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_object\_ids}{update\_object\_ids}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+object\+\_\+ids (\begin{DoxyParamCaption}\item[{Q\+Combo\+Box $\ast$}]{box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the combo box for object I\+Ds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box} & The combo box to update. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ab6b59625edb9e5f6621bbdafc1bb7b6d}\label{classikg_1_1_labeling_presenter_ab6b59625edb9e5f6621bbdafc1bb7b6d}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_operation\_views@{update\_operation\_views}}
+\index{update\_operation\_views@{update\_operation\_views}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_operation\_views()}{update\_operation\_views()}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+operation\+\_\+views (\begin{DoxyParamCaption}\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Updates all operation views. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em refresh} & Whether to refresh the views. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae2430bcf5c04793ceca0f64233378c2f}\label{classikg_1_1_labeling_presenter_ae2430bcf5c04793ceca0f64233378c2f}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_side\_view@{update\_side\_view}}
+\index{update\_side\_view@{update\_side\_view}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_side\_view}{update\_side\_view}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+side\+\_\+view (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the side view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the view to update. \\
+\hline
+{\em refresh} & Whether to refresh the view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a9024074580806978a40a743c5041f4ac}\label{classikg_1_1_labeling_presenter_a9024074580806978a40a743c5041f4ac}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_single\_trajectory\_view@{update\_single\_trajectory\_view}}
+\index{update\_single\_trajectory\_view@{update\_single\_trajectory\_view}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_single\_trajectory\_view}{update\_single\_trajectory\_view}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+single\+\_\+trajectory\+\_\+view (\begin{DoxyParamCaption}\item[{int}]{obj\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the single trajectory view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+Id} & The ID of the object to update. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ae8a262860b8c3eec4c29f4589e2240e2}\label{classikg_1_1_labeling_presenter_ae8a262860b8c3eec4c29f4589e2240e2}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_top\_view@{update\_top\_view}}
+\index{update\_top\_view@{update\_top\_view}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_top\_view}{update\_top\_view}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+top\+\_\+view (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates the top view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the view to update. \\
+\hline
+{\em refresh} & Whether to refresh the view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_ac5434fe4a924cfbabb3fced9869b5ed1}\label{classikg_1_1_labeling_presenter_ac5434fe4a924cfbabb3fced9869b5ed1}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_view\_column@{update\_view\_column}}
+\index{update\_view\_column@{update\_view\_column}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_view\_column()}{update\_view\_column()}}
+{\footnotesize\ttfamily int ikg\+::\+Labeling\+Presenter\+::update\+\_\+view\+\_\+column (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{bool}]{refresh = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Updates a single operation column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the column to update. \\
+\hline
+{\em refresh} & Whether to refresh the column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_labeling_presenter_a3ffa1db266b3d9eabae4dd6702b5af64}\label{classikg_1_1_labeling_presenter_a3ffa1db266b3d9eabae4dd6702b5af64}} 
+\index{ikg::LabelingPresenter@{ikg::LabelingPresenter}!update\_zoom\_factor\_operation\_cell@{update\_zoom\_factor\_operation\_cell}}
+\index{update\_zoom\_factor\_operation\_cell@{update\_zoom\_factor\_operation\_cell}!ikg::LabelingPresenter@{ikg::LabelingPresenter}}
+\doxysubsubsection{\texorpdfstring{update\_zoom\_factor\_operation\_cell()}{update\_zoom\_factor\_operation\_cell()}}
+{\footnotesize\ttfamily void ikg\+::\+Labeling\+Presenter\+::update\+\_\+zoom\+\_\+factor\+\_\+operation\+\_\+cell (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{double}]{s,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the zoom factor for the operation view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row index of the view. \\
+\hline
+{\em s} & The zoom factor. \\
+\hline
+{\em index} & The index of the view. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/presenter/Labeling\+Presenter.\+h\item 
+src/presenter/Labeling\+Presenter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,252 @@
+\hypertarget{classikg_1_1_trajectory}{}\doxysection{ikg\+::Trajectory Class Reference}
+\label{classikg_1_1_trajectory}\index{ikg::Trajectory@{ikg::Trajectory}}
+
+
+Represents a trajectory consisting of multiple poses.  
+
+
+
+
+{\ttfamily \#include $<$Trajectory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_aa340ba80f1f4d1aa39f19f069d5d8089}\label{classikg_1_1_trajectory_aa340ba80f1f4d1aa39f19f069d5d8089}} 
+\mbox{\hyperlink{classikg_1_1_trajectory_aa340ba80f1f4d1aa39f19f069d5d8089}{Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_ac673c37025ca5353ad99ab41c936e75d}\label{classikg_1_1_trajectory_ac673c37025ca5353ad99ab41c936e75d}} 
+virtual \mbox{\hyperlink{classikg_1_1_trajectory_ac673c37025ca5353ad99ab41c936e75d}{$\sim$\+Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_trajectory_a77c902261943e1fe117017622f2338f8}{get\+\_\+pose\+\_\+at}} (double time, \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p, int index=-\/1) const
+\begin{DoxyCompactList}\small\item\em Get the pose at a specific time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_trajectory_afa3d0b6943eb78b950f653f954818602}{insert\+\_\+pose}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p)
+\begin{DoxyCompactList}\small\item\em Insert a pose into the trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_trajectory_a673ba1ab4fed1fba14513ec689842602}{interpolate\+\_\+between\+\_\+key\+\_\+frames}} (double keyframe, double frequence)
+\begin{DoxyCompactList}\small\item\em Interpolate between key frames. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_trajectory_a460394caaf693d241ea82543c1f2bcfe}{is\+\_\+finialized}} () const
+\begin{DoxyCompactList}\small\item\em Check if the trajectory is finalized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_a119b2d9fdd18d7f8b698cf920bd08027}\label{classikg_1_1_trajectory_a119b2d9fdd18d7f8b698cf920bd08027}} 
+void \mbox{\hyperlink{classikg_1_1_trajectory_a119b2d9fdd18d7f8b698cf920bd08027}{update\+\_\+interpolated\+\_\+pose\+\_\+bounding\+\_\+boxes}} ()
+\begin{DoxyCompactList}\small\item\em Update the bounding boxes of interpolated poses. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classikg_1_1_trajectory_a0f964d55545e8090f8dd3db966e308c3}{merge\+\_\+time}} (const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&t, double dist\+Th=D\+B\+L\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Merge another trajectory into this one based on time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_trajectory_ae6153605520525e5a0ab93be64cfa93b}{remove\+\_\+duplicate}} (double frequence)
+\begin{DoxyCompactList}\small\item\em Remove duplicate poses based on frequency. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classikg_1_1_trajectory_a8f567448cf603a5b3585d138451ebe34}{valid}} (double dist, double curv)
+\begin{DoxyCompactList}\small\item\em Validate the trajectory based on distance and curvature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_a0ef8ba5a65e92a550725b164fc117390}\label{classikg_1_1_trajectory_a0ef8ba5a65e92a550725b164fc117390}} 
+\mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \& {\bfseries operator=} (const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&t)
+\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_a06d64901ae1da6efe43b0970158d3359}\label{classikg_1_1_trajectory_a06d64901ae1da6efe43b0970158d3359}} 
+{\bfseries Trajectory} (const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&t)
+\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_a9ec7e4f6c86f710c68b7b178429d461e}\label{classikg_1_1_trajectory_a9ec7e4f6c86f710c68b7b178429d461e}} 
+\mbox{\hyperlink{classikg_1_1_pose}{Pose}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_acab548c3f10135b3db3289667254968c}\label{classikg_1_1_trajectory_acab548c3f10135b3db3289667254968c}} 
+const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classikg_1_1_trajectory_afc7dd9f513c3b0f28be4f6b69c55a281}{calc\+\_\+curvature}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&A, const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&B, const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&C)
+\begin{DoxyCompactList}\small\item\em Calculate the curvature given three poses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_ac35c745077806113d0aa422d186fbb00}\label{classikg_1_1_trajectory_ac35c745077806113d0aa422d186fbb00}} 
+int \mbox{\hyperlink{classikg_1_1_trajectory_ac35c745077806113d0aa422d186fbb00}{id}}
+\begin{DoxyCompactList}\small\item\em The ID of the trajectory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_a737874ddadbdd3ddec1d78e6019d6cf7}\label{classikg_1_1_trajectory_a737874ddadbdd3ddec1d78e6019d6cf7}} 
+int \mbox{\hyperlink{classikg_1_1_trajectory_a737874ddadbdd3ddec1d78e6019d6cf7}{class\+Id}}
+\begin{DoxyCompactList}\small\item\em The class ID of the trajectory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_trajectory_aa0922bf741f4e75de11729fb1109fa0d}\label{classikg_1_1_trajectory_aa0922bf741f4e75de11729fb1109fa0d}} 
+std\+::vector$<$ \mbox{\hyperlink{classikg_1_1_pose}{Pose}} $>$ \mbox{\hyperlink{classikg_1_1_trajectory_aa0922bf741f4e75de11729fb1109fa0d}{pose\+Data}}
+\begin{DoxyCompactList}\small\item\em The pose data of the trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classikg_1_1_trajectory_a4dde7721f7c94de7112a7dbea245c0e1}{operator$<$$<$}} (std\+::ostream \&out\+Stream, const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&t)
+\begin{DoxyCompactList}\small\item\em Overloaded output stream operator for \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a trajectory consisting of multiple poses. 
+
+The \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} class provides functionality to manage and manipulate a series of poses that form a trajectory. It includes methods for calculating curvature, interpolating between key frames, merging trajectories, and validating the trajectory based on distance and curvature thresholds. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_trajectory_afc7dd9f513c3b0f28be4f6b69c55a281}\label{classikg_1_1_trajectory_afc7dd9f513c3b0f28be4f6b69c55a281}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!calc\_curvature@{calc\_curvature}}
+\index{calc\_curvature@{calc\_curvature}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{calc\_curvature()}{calc\_curvature()}}
+{\footnotesize\ttfamily double Trajectory\+::calc\+\_\+curvature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{A,  }\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{B,  }\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculate the curvature given three poses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The first pose. \\
+\hline
+{\em B} & The second pose. \\
+\hline
+{\em C} & The third pose. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The curvature. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a77c902261943e1fe117017622f2338f8}\label{classikg_1_1_trajectory_a77c902261943e1fe117017622f2338f8}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!get\_pose\_at@{get\_pose\_at}}
+\index{get\_pose\_at@{get\_pose\_at}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{get\_pose\_at()}{get\_pose\_at()}}
+{\footnotesize\ttfamily bool Trajectory\+::get\+\_\+pose\+\_\+at (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{\mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p,  }\item[{int}]{index = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+Get the pose at a specific time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The time to get the pose at. \\
+\hline
+{\em p} & The pose to populate. \\
+\hline
+{\em index} & The index to start searching from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pose found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_trajectory_afa3d0b6943eb78b950f653f954818602}\label{classikg_1_1_trajectory_afa3d0b6943eb78b950f653f954818602}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!insert\_pose@{insert\_pose}}
+\index{insert\_pose@{insert\_pose}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{insert\_pose()}{insert\_pose()}}
+{\footnotesize\ttfamily void Trajectory\+::insert\+\_\+pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Insert a pose into the trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pose to insert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a673ba1ab4fed1fba14513ec689842602}\label{classikg_1_1_trajectory_a673ba1ab4fed1fba14513ec689842602}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!interpolate\_between\_key\_frames@{interpolate\_between\_key\_frames}}
+\index{interpolate\_between\_key\_frames@{interpolate\_between\_key\_frames}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{interpolate\_between\_key\_frames()}{interpolate\_between\_key\_frames()}}
+{\footnotesize\ttfamily void Trajectory\+::interpolate\+\_\+between\+\_\+key\+\_\+frames (\begin{DoxyParamCaption}\item[{double}]{keyframe,  }\item[{double}]{frequence }\end{DoxyParamCaption})}
+
+
+
+Interpolate between key frames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyframe} & The keyframe interval. \\
+\hline
+{\em frequence} & The frequency of interpolation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a460394caaf693d241ea82543c1f2bcfe}\label{classikg_1_1_trajectory_a460394caaf693d241ea82543c1f2bcfe}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!is\_finialized@{is\_finialized}}
+\index{is\_finialized@{is\_finialized}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{is\_finialized()}{is\_finialized()}}
+{\footnotesize\ttfamily bool Trajectory\+::is\+\_\+finialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the trajectory is finalized. 
+
+\begin{DoxyReturn}{Returns}
+True if finalized, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a0f964d55545e8090f8dd3db966e308c3}\label{classikg_1_1_trajectory_a0f964d55545e8090f8dd3db966e308c3}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!merge\_time@{merge\_time}}
+\index{merge\_time@{merge\_time}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{merge\_time()}{merge\_time()}}
+{\footnotesize\ttfamily bool Trajectory\+::merge\+\_\+time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&}]{t,  }\item[{double}]{dist\+Th = {\ttfamily DBL\+\_\+MAX} }\end{DoxyParamCaption})}
+
+
+
+Merge another trajectory into this one based on time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The other trajectory. \\
+\hline
+{\em dist\+Th} & The distance threshold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if merged successfully, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_trajectory_ae6153605520525e5a0ab93be64cfa93b}\label{classikg_1_1_trajectory_ae6153605520525e5a0ab93be64cfa93b}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!remove\_duplicate@{remove\_duplicate}}
+\index{remove\_duplicate@{remove\_duplicate}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{remove\_duplicate()}{remove\_duplicate()}}
+{\footnotesize\ttfamily void Trajectory\+::remove\+\_\+duplicate (\begin{DoxyParamCaption}\item[{double}]{frequence }\end{DoxyParamCaption})}
+
+
+
+Remove duplicate poses based on frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequence} & The frequency to check for duplicates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a8f567448cf603a5b3585d138451ebe34}\label{classikg_1_1_trajectory_a8f567448cf603a5b3585d138451ebe34}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!valid@{valid}}
+\index{valid@{valid}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Trajectory\+::valid (\begin{DoxyParamCaption}\item[{double}]{dist,  }\item[{double}]{curv }\end{DoxyParamCaption})}
+
+
+
+Validate the trajectory based on distance and curvature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & The distance threshold. \\
+\hline
+{\em curv} & The curvature threshold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of invalid pose indices. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_trajectory_a4dde7721f7c94de7112a7dbea245c0e1}\label{classikg_1_1_trajectory_a4dde7721f7c94de7112a7dbea245c0e1}} 
+\index{ikg::Trajectory@{ikg::Trajectory}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ikg::Trajectory@{ikg::Trajectory}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out\+Stream,  }\item[{const \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded output stream operator for \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+Stream} & The output stream. \\
+\hline
+{\em t} & The \mbox{\hyperlink{classikg_1_1_trajectory}{Trajectory}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/geometries/Trajectory.\+h\item 
+src/model/geometries/Trajectory.\+cpp\end{DoxyCompactItemize}

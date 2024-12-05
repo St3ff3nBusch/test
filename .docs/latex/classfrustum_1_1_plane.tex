@@ -1,0 +1,90 @@
+\hypertarget{classfrustum_1_1_plane}{}\doxysection{frustum\+::Plane Class Reference}
+\label{classfrustum_1_1_plane}\index{frustum::Plane@{frustum::Plane}}
+
+
+Represents a plane in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Frustum.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfrustum_1_1_plane_ad0d4734c0b5ac597b65d8687f745b1a1}{Plane}} (double nx=0, double ny=0, double nz=0, double distance=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_plane_a2686c65ce37522837949bf8b88276567}\label{classfrustum_1_1_plane_a2686c65ce37522837949bf8b88276567}} 
+virtual \mbox{\hyperlink{classfrustum_1_1_plane_a2686c65ce37522837949bf8b88276567}{$\sim$\+Plane}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Point3d $>$ }\\double \mbox{\hyperlink{classfrustum_1_1_plane_ae95167ab2ab1de3a7d807b4cd8e3a29e}{get\+\_\+distance}} (const Point3d \&\mbox{\hyperlink{classfrustum_1_1_plane_a51cd8fdd70fec8cdde21ce3d60dcca4f}{p}}) const
+\begin{DoxyCompactList}\small\item\em Get the distance from a point to the plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfrustum_1_1_plane_ae60bcdf48b42e6281ebbb21db475650d}\label{classfrustum_1_1_plane_ae60bcdf48b42e6281ebbb21db475650d}} 
+cv\+::\+Point3d \mbox{\hyperlink{classfrustum_1_1_plane_ae60bcdf48b42e6281ebbb21db475650d}{n}}
+\begin{DoxyCompactList}\small\item\em The normal vector of the plane. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_plane_a51cd8fdd70fec8cdde21ce3d60dcca4f}\label{classfrustum_1_1_plane_a51cd8fdd70fec8cdde21ce3d60dcca4f}} 
+cv\+::\+Point3d \mbox{\hyperlink{classfrustum_1_1_plane_a51cd8fdd70fec8cdde21ce3d60dcca4f}{p}}
+\begin{DoxyCompactList}\small\item\em A point on the plane. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfrustum_1_1_plane_a1faac139741ab8361e05cd3de43b2b54}\label{classfrustum_1_1_plane_a1faac139741ab8361e05cd3de43b2b54}} 
+double \mbox{\hyperlink{classfrustum_1_1_plane_a1faac139741ab8361e05cd3de43b2b54}{d}}
+\begin{DoxyCompactList}\small\item\em The distance from the origin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a plane in 3D space. 
+
+The \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} class defines a plane using a normal vector and a point on the plane. It provides functionality to calculate the distance from a point to the plane. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfrustum_1_1_plane_ad0d4734c0b5ac597b65d8687f745b1a1}\label{classfrustum_1_1_plane_ad0d4734c0b5ac597b65d8687f745b1a1}} 
+\index{frustum::Plane@{frustum::Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!frustum::Plane@{frustum::Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}}
+{\footnotesize\ttfamily frustum\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{double}]{nx = {\ttfamily 0},  }\item[{double}]{ny = {\ttfamily 0},  }\item[{double}]{nz = {\ttfamily 0},  }\item[{double}]{distance = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classfrustum_1_1_plane}{Plane}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & The x component of the normal vector. \\
+\hline
+{\em ny} & The y component of the normal vector. \\
+\hline
+{\em nz} & The z component of the normal vector. \\
+\hline
+{\em distance} & The distance from the origin. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfrustum_1_1_plane_ae95167ab2ab1de3a7d807b4cd8e3a29e}\label{classfrustum_1_1_plane_ae95167ab2ab1de3a7d807b4cd8e3a29e}} 
+\index{frustum::Plane@{frustum::Plane}!get\_distance@{get\_distance}}
+\index{get\_distance@{get\_distance}!frustum::Plane@{frustum::Plane}}
+\doxysubsubsection{\texorpdfstring{get\_distance()}{get\_distance()}}
+{\footnotesize\ttfamily template$<$class Point3d $>$ \\
+double frustum\+::\+Plane\+::get\+\_\+distance (\begin{DoxyParamCaption}\item[{const Point3d \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the distance from a point to the plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance from the point to the plane. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/Frustum.\+h\item 
+src/model/Frustum.\+cpp\end{DoxyCompactItemize}

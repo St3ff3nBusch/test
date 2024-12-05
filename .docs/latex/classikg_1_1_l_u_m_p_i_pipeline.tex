@@ -1,0 +1,273 @@
+\hypertarget{classikg_1_1_l_u_m_p_i_pipeline}{}\doxysection{ikg\+::L\+U\+M\+P\+I\+Pipeline Class Reference}
+\label{classikg_1_1_l_u_m_p_i_pipeline}\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+
+
+A class for processing and analyzing point cloud data.  
+
+
+
+
+{\ttfamily \#include $<$L\+U\+M\+P\+I\+Pipeline.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_ae12f62101d8f7bee4288cb7cef1c1bf3}\label{classikg_1_1_l_u_m_p_i_pipeline_ae12f62101d8f7bee4288cb7cef1c1bf3}} 
+\mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_ae12f62101d8f7bee4288cb7cef1c1bf3}{L\+U\+M\+P\+I\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline}{L\+U\+M\+P\+I\+Pipeline}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a4beabe80256a984e4a6a78ea0f323a8e}{init\+\_\+back\+\_\+ground}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Initialize background data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_af53f0145ab6317adc85ff7fd4c69615b}\label{classikg_1_1_l_u_m_p_i_pipeline_af53f0145ab6317adc85ff7fd4c69615b}} 
+virtual \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_af53f0145ab6317adc85ff7fd4c69615b}{$\sim$\+L\+U\+M\+P\+I\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline}{L\+U\+M\+P\+I\+Pipeline}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_ad76d59e76f003c6e3700a12d683eb105}{correct\+\_\+pose}} (\mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p, const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&pc)
+\begin{DoxyCompactList}\small\item\em Correct the pose based on the given point cloud. \end{DoxyCompactList}\item 
+static pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a4357f33c34b47028b39310ba15fccf91}{filter\+\_\+pc\+\_\+by\+\_\+time}} (const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&pc, double min\+Time, double max\+Time)
+\begin{DoxyCompactList}\small\item\em Filter point cloud by time. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a6f0149781ed6749fe815d8a379e2926f}{generate\+\_\+video}} (const std\+::vector$<$ \mbox{\hyperlink{classikg_1_1_trajectory}{ikg\+::\+Trajectory}} $>$ \&trajectories, std\+::string video\+Path, std\+::string out\+Path, \mbox{\hyperlink{classikg_1_1_sensor}{ikg\+::\+Sensor}} s, int skip=1, int start=-\/1, int end=-\/1)
+\begin{DoxyCompactList}\small\item\em Generate a video from trajectories. \end{DoxyCompactList}\item 
+static pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a2f21a02eccc79312ac7ff1165d1ce7ec}{lumpi\+\_\+to\+\_\+rgb}} (const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&pc)
+\begin{DoxyCompactList}\small\item\em Convert L\+U\+M\+PI point cloud to R\+GB point cloud. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a7448ffd7c55acc5c6c938e5c4db61dbd}{read\+\_\+background}} (std\+::unordered\+\_\+map$<$ int, cv\+::\+Mat $>$ \&th, std\+::unordered\+\_\+map$<$ int, double $>$ \&angle\+Normalizer, std\+::string path)
+\begin{DoxyCompactList}\small\item\em Read background data. \end{DoxyCompactList}\item 
+static std\+::pair$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_af73565e4e208b1a06edafa4028016a02}{remove\+\_\+back\+\_\+ground}} (const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&pc, const std\+::unordered\+\_\+map$<$ int, cv\+::\+Mat $>$ \&th, const std\+::unordered\+\_\+map$<$ int, double $>$ \&deg\+Normalizer)
+\begin{DoxyCompactList}\small\item\em Remove background from point cloud. \end{DoxyCompactList}\item 
+static cv\+::\+Vec3b \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a7c833cfe0a7e1cd96d9c18bbf24852b7}{switch\+\_\+class\+\_\+color}} (int id)
+\begin{DoxyCompactList}\small\item\em Get color for a class ID. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_afc0096f391102fedcb6113b67c444155}{switch\+\_\+class\+\_\+description}} (int id, bool yolo=false)
+\begin{DoxyCompactList}\small\item\em Get description for a class ID. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_ad46f577f32a19583c19e9645779c30f0}{visual\+Output\+Bounding\+Box}} (const std\+::vector$<$ \mbox{\hyperlink{classikg_1_1_bounding_box}{Bounding\+Box}} $>$ \&current\+\_\+measurement, pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr viewer, int thick, std\+::string name, bool show\+Ids)
+\begin{DoxyCompactList}\small\item\em Visualize bounding boxes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a32d244c59ad5613cf4704f15c92806c5}\label{classikg_1_1_l_u_m_p_i_pipeline_a32d244c59ad5613cf4704f15c92806c5}} 
+std\+::unordered\+\_\+map$<$ int, double $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_a32d244c59ad5613cf4704f15c92806c5}{deg\+Norm}}
+\begin{DoxyCompactList}\small\item\em Degree normalization map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_ab450dbb80d89e0fe8dfcf829acacdbc5}\label{classikg_1_1_l_u_m_p_i_pipeline_ab450dbb80d89e0fe8dfcf829acacdbc5}} 
+std\+::unordered\+\_\+map$<$ int, cv\+::\+Mat $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_ab450dbb80d89e0fe8dfcf829acacdbc5}{thresholds}}
+\begin{DoxyCompactList}\small\item\em Thresholds for background subtraction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_ab5b89137a7a444ad27ebcbe08ca648d3}\label{classikg_1_1_l_u_m_p_i_pipeline_ab5b89137a7a444ad27ebcbe08ca648d3}} 
+std\+::map$<$ int, pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ $>$ \mbox{\hyperlink{classikg_1_1_l_u_m_p_i_pipeline_ab5b89137a7a444ad27ebcbe08ca648d3}{clouds}}
+\begin{DoxyCompactList}\small\item\em Map of point clouds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for processing and analyzing point cloud data. 
+
+This class provides various methods for processing point cloud data, including pose correction, filtering by time, background initialization and removal, video generation, and visualization. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_ad76d59e76f003c6e3700a12d683eb105}\label{classikg_1_1_l_u_m_p_i_pipeline_ad76d59e76f003c6e3700a12d683eb105}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!correct\_pose@{correct\_pose}}
+\index{correct\_pose@{correct\_pose}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{correct\_pose()}{correct\_pose()}}
+{\footnotesize\ttfamily void ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::correct\+\_\+pose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p,  }\item[{const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Correct the pose based on the given point cloud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \mbox{\hyperlink{classikg_1_1_pose}{Pose}} to be corrected \\
+\hline
+{\em pc} & Point cloud data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a4357f33c34b47028b39310ba15fccf91}\label{classikg_1_1_l_u_m_p_i_pipeline_a4357f33c34b47028b39310ba15fccf91}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!filter\_pc\_by\_time@{filter\_pc\_by\_time}}
+\index{filter\_pc\_by\_time@{filter\_pc\_by\_time}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{filter\_pc\_by\_time()}{filter\_pc\_by\_time()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::filter\+\_\+pc\+\_\+by\+\_\+time (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&}]{pc,  }\item[{double}]{min\+Time,  }\item[{double}]{max\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Filter point cloud by time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Point cloud data \\
+\hline
+{\em min\+Time} & Minimum time \\
+\hline
+{\em max\+Time} & Maximum time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filtered point cloud 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a6f0149781ed6749fe815d8a379e2926f}\label{classikg_1_1_l_u_m_p_i_pipeline_a6f0149781ed6749fe815d8a379e2926f}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!generate\_video@{generate\_video}}
+\index{generate\_video@{generate\_video}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{generate\_video()}{generate\_video()}}
+{\footnotesize\ttfamily bool ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::generate\+\_\+video (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classikg_1_1_trajectory}{ikg\+::\+Trajectory}} $>$ \&}]{trajectories,  }\item[{std\+::string}]{video\+Path,  }\item[{std\+::string}]{out\+Path,  }\item[{\mbox{\hyperlink{classikg_1_1_sensor}{ikg\+::\+Sensor}}}]{s,  }\item[{int}]{skip = {\ttfamily 1},  }\item[{int}]{start = {\ttfamily -\/1},  }\item[{int}]{end = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generate a video from trajectories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trajectories} & Vector of trajectories \\
+\hline
+{\em video\+Path} & Path to input video \\
+\hline
+{\em out\+Path} & Path to output video \\
+\hline
+{\em s} & \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} data \\
+\hline
+{\em skip} & Frames to skip \\
+\hline
+{\em start} & Start frame \\
+\hline
+{\em end} & End frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a4beabe80256a984e4a6a78ea0f323a8e}\label{classikg_1_1_l_u_m_p_i_pipeline_a4beabe80256a984e4a6a78ea0f323a8e}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!init\_back\_ground@{init\_back\_ground}}
+\index{init\_back\_ground@{init\_back\_ground}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{init\_back\_ground()}{init\_back\_ground()}}
+{\footnotesize\ttfamily void ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::init\+\_\+back\+\_\+ground (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Initialize background data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to background data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a2f21a02eccc79312ac7ff1165d1ce7ec}\label{classikg_1_1_l_u_m_p_i_pipeline_a2f21a02eccc79312ac7ff1165d1ce7ec}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!lumpi\_to\_rgb@{lumpi\_to\_rgb}}
+\index{lumpi\_to\_rgb@{lumpi\_to\_rgb}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{lumpi\_to\_rgb()}{lumpi\_to\_rgb()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$ ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::lumpi\+\_\+to\+\_\+rgb (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert L\+U\+M\+PI point cloud to R\+GB point cloud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & L\+U\+M\+PI point cloud \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+GB point cloud 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a7448ffd7c55acc5c6c938e5c4db61dbd}\label{classikg_1_1_l_u_m_p_i_pipeline_a7448ffd7c55acc5c6c938e5c4db61dbd}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!read\_background@{read\_background}}
+\index{read\_background@{read\_background}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{read\_background()}{read\_background()}}
+{\footnotesize\ttfamily void ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::read\+\_\+background (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ int, cv\+::\+Mat $>$ \&}]{th,  }\item[{std\+::unordered\+\_\+map$<$ int, double $>$ \&}]{angle\+Normalizer,  }\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read background data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em th} & Output thresholds \\
+\hline
+{\em angle\+Normalizer} & Output angle normalizer \\
+\hline
+{\em path} & Path to background data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_af73565e4e208b1a06edafa4028016a02}\label{classikg_1_1_l_u_m_p_i_pipeline_af73565e4e208b1a06edafa4028016a02}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!remove\_back\_ground@{remove\_back\_ground}}
+\index{remove\_back\_ground@{remove\_back\_ground}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{remove\_back\_ground()}{remove\_back\_ground()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$ $>$ ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::remove\+\_\+back\+\_\+ground (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ \mbox{\hyperlink{struct_i_k_g_b}{I\+K\+GB}} $>$ \&}]{pc,  }\item[{const std\+::unordered\+\_\+map$<$ int, cv\+::\+Mat $>$ \&}]{th,  }\item[{const std\+::unordered\+\_\+map$<$ int, double $>$ \&}]{deg\+Normalizer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remove background from point cloud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Point cloud data \\
+\hline
+{\em th} & Thresholds \\
+\hline
+{\em deg\+Normalizer} & Degree normalizer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of foreground and background indices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_a7c833cfe0a7e1cd96d9c18bbf24852b7}\label{classikg_1_1_l_u_m_p_i_pipeline_a7c833cfe0a7e1cd96d9c18bbf24852b7}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!switch\_class\_color@{switch\_class\_color}}
+\index{switch\_class\_color@{switch\_class\_color}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{switch\_class\_color()}{switch\_class\_color()}}
+{\footnotesize\ttfamily cv\+::\+Vec3b ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::switch\+\_\+class\+\_\+color (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get color for a class ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Class ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_afc0096f391102fedcb6113b67c444155}\label{classikg_1_1_l_u_m_p_i_pipeline_afc0096f391102fedcb6113b67c444155}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!switch\_class\_description@{switch\_class\_description}}
+\index{switch\_class\_description@{switch\_class\_description}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{switch\_class\_description()}{switch\_class\_description()}}
+{\footnotesize\ttfamily std\+::string ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::switch\+\_\+class\+\_\+description (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{bool}]{yolo = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get description for a class ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Class ID \\
+\hline
+{\em yolo} & Flag to use Y\+O\+LO class descriptions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class description 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_l_u_m_p_i_pipeline_ad46f577f32a19583c19e9645779c30f0}\label{classikg_1_1_l_u_m_p_i_pipeline_ad46f577f32a19583c19e9645779c30f0}} 
+\index{ikg::LUMPIPipeline@{ikg::LUMPIPipeline}!visualOutputBoundingBox@{visualOutputBoundingBox}}
+\index{visualOutputBoundingBox@{visualOutputBoundingBox}!ikg::LUMPIPipeline@{ikg::LUMPIPipeline}}
+\doxysubsubsection{\texorpdfstring{visualOutputBoundingBox()}{visualOutputBoundingBox()}}
+{\footnotesize\ttfamily void ikg\+::\+L\+U\+M\+P\+I\+Pipeline\+::visual\+Output\+Bounding\+Box (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classikg_1_1_bounding_box}{Bounding\+Box}} $>$ \&}]{current\+\_\+measurement,  }\item[{pcl\+::visualization\+::\+P\+C\+L\+Visualizer\+::\+Ptr}]{viewer,  }\item[{int}]{thick,  }\item[{std\+::string}]{name,  }\item[{bool}]{show\+Ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Visualize bounding boxes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+measurement} & Vector of current measurements \\
+\hline
+{\em viewer} & P\+CL visualizer \\
+\hline
+{\em thick} & Line thickness \\
+\hline
+{\em name} & Name of the visualization \\
+\hline
+{\em show\+Ids} & Flag to show I\+Ds \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/L\+U\+M\+P\+I\+Pipeline.\+h\item 
+src/model/L\+U\+M\+P\+I\+Pipeline.\+cpp\end{DoxyCompactItemize}

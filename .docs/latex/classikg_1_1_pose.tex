@@ -1,0 +1,268 @@
+\hypertarget{classikg_1_1_pose}{}\doxysection{ikg\+::Pose Class Reference}
+\label{classikg_1_1_pose}\index{ikg::Pose@{ikg::Pose}}
+
+
+Represents a 3D pose with various attributes such as position, orientation, and bounding box.  
+
+
+
+
+{\ttfamily \#include $<$Pose.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classikg_1_1_pose_a01665a043dce83fe1abe9309bf7a0834}{Pose}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&a)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classikg_1_1_pose_a93084f3b57b84c7a657e5a094388cdd1}{Pose}} (double \mbox{\hyperlink{classikg_1_1_pose_a2f2e0d9d7f0e108a6fc2c78a5af7c71b}{x}}=0, double \mbox{\hyperlink{classikg_1_1_pose_a49d071aaee475741e9b226022cf38ed6}{y}}=0, double \mbox{\hyperlink{classikg_1_1_pose_a995a69841bede12eac0adc1deaa32543}{z}}=0, double \mbox{\hyperlink{classikg_1_1_pose_a803531e438592c60ce247b9724baebe7}{time}}=0, int t\+\_\+id=0, int \mbox{\hyperlink{classikg_1_1_pose_a87966ca22962a63f566246486dbc3e6e}{p\+\_\+id}}=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classikg_1_1_pose}{Pose}} \& \mbox{\hyperlink{classikg_1_1_pose_a9cd8ca505f31e83241c6c4729cc13e71}{operator=}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&a)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_ad1f894406ef64632203ffd9138d32a0b}\label{classikg_1_1_pose_ad1f894406ef64632203ffd9138d32a0b}} 
+virtual \mbox{\hyperlink{classikg_1_1_pose_ad1f894406ef64632203ffd9138d32a0b}{$\sim$\+Pose}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classikg_1_1_pose_ad84742d6a5a6d6e966ce765bdc4db947}{distance\+\_\+in\+\_\+2d}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&a, const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&b)
+\begin{DoxyCompactList}\small\item\em Calculate the 2D distance between two poses. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \mbox{\hyperlink{classikg_1_1_pose_a66d85f49a8ba577882fbeb3426dce403}{interpolate}} (const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p1, const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p2, double s)
+\begin{DoxyCompactList}\small\item\em Interpolate between two poses. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classikg_1_1_pose_aa02c2fc2494eff079215d0d363e89291}{interpolate\+\_\+heading}} (double a, double b, double s)
+\begin{DoxyCompactList}\small\item\em Interpolate the heading between two angles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a2bb77a650272f9e9e9ff5f6b95df0763}\label{classikg_1_1_pose_a2bb77a650272f9e9e9ff5f6b95df0763}} 
+int \mbox{\hyperlink{classikg_1_1_pose_a2bb77a650272f9e9e9ff5f6b95df0763}{t\+Id}}
+\begin{DoxyCompactList}\small\item\em The trajectory ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a87966ca22962a63f566246486dbc3e6e}\label{classikg_1_1_pose_a87966ca22962a63f566246486dbc3e6e}} 
+int \mbox{\hyperlink{classikg_1_1_pose_a87966ca22962a63f566246486dbc3e6e}{p\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em The pose ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_af4705b8cad4fc834728e5c1827eab466}\label{classikg_1_1_pose_af4705b8cad4fc834728e5c1827eab466}} 
+int \mbox{\hyperlink{classikg_1_1_pose_af4705b8cad4fc834728e5c1827eab466}{class\+Id}}
+\begin{DoxyCompactList}\small\item\em The class ID of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a879002b0350c3eeee10164bf7e000c2d}\label{classikg_1_1_pose_a879002b0350c3eeee10164bf7e000c2d}} 
+\mbox{\hyperlink{classikg_1_1_bounding_box}{Bounding\+Box}} \mbox{\hyperlink{classikg_1_1_pose_a879002b0350c3eeee10164bf7e000c2d}{bb}}
+\begin{DoxyCompactList}\small\item\em The bounding box of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a2f2e0d9d7f0e108a6fc2c78a5af7c71b}\label{classikg_1_1_pose_a2f2e0d9d7f0e108a6fc2c78a5af7c71b}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a2f2e0d9d7f0e108a6fc2c78a5af7c71b}{x}}
+\begin{DoxyCompactList}\small\item\em The x-\/coordinate of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a49d071aaee475741e9b226022cf38ed6}\label{classikg_1_1_pose_a49d071aaee475741e9b226022cf38ed6}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a49d071aaee475741e9b226022cf38ed6}{y}}
+\begin{DoxyCompactList}\small\item\em The y-\/coordinate of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a995a69841bede12eac0adc1deaa32543}\label{classikg_1_1_pose_a995a69841bede12eac0adc1deaa32543}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a995a69841bede12eac0adc1deaa32543}{z}}
+\begin{DoxyCompactList}\small\item\em The z-\/coordinate of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a787247d9798549501a82f477eb61f053}\label{classikg_1_1_pose_a787247d9798549501a82f477eb61f053}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a787247d9798549501a82f477eb61f053}{w}}
+\begin{DoxyCompactList}\small\item\em The width of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a2eacc82713fa5ea6b6bdca31d2aaf116}\label{classikg_1_1_pose_a2eacc82713fa5ea6b6bdca31d2aaf116}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a2eacc82713fa5ea6b6bdca31d2aaf116}{l}}
+\begin{DoxyCompactList}\small\item\em The length of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_afd641b51615a893f4cf4f20cfc67aed0}\label{classikg_1_1_pose_afd641b51615a893f4cf4f20cfc67aed0}} 
+double \mbox{\hyperlink{classikg_1_1_pose_afd641b51615a893f4cf4f20cfc67aed0}{h}}
+\begin{DoxyCompactList}\small\item\em The height of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a803531e438592c60ce247b9724baebe7}\label{classikg_1_1_pose_a803531e438592c60ce247b9724baebe7}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a803531e438592c60ce247b9724baebe7}{time}}
+\begin{DoxyCompactList}\small\item\em The time of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_af6af285c178331420b771ffe2654a097}\label{classikg_1_1_pose_af6af285c178331420b771ffe2654a097}} 
+double \mbox{\hyperlink{classikg_1_1_pose_af6af285c178331420b771ffe2654a097}{score}}
+\begin{DoxyCompactList}\small\item\em The score of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a8395e79a335d0793e9bfe51f76463fb5}\label{classikg_1_1_pose_a8395e79a335d0793e9bfe51f76463fb5}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a8395e79a335d0793e9bfe51f76463fb5}{visibility}}
+\begin{DoxyCompactList}\small\item\em The visibility of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a26b349c1c252f8b93405d2ace09441e0}\label{classikg_1_1_pose_a26b349c1c252f8b93405d2ace09441e0}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a26b349c1c252f8b93405d2ace09441e0}{orientation}}
+\begin{DoxyCompactList}\small\item\em The orientation of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_aec18c71a338df3192643aa3dbbdd4d22}\label{classikg_1_1_pose_aec18c71a338df3192643aa3dbbdd4d22}} 
+double \mbox{\hyperlink{classikg_1_1_pose_aec18c71a338df3192643aa3dbbdd4d22}{so}}
+\begin{DoxyCompactList}\small\item\em The sine of the orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a90dc8f4a0b1522bf7aca561ac4435a05}\label{classikg_1_1_pose_a90dc8f4a0b1522bf7aca561ac4435a05}} 
+double \mbox{\hyperlink{classikg_1_1_pose_a90dc8f4a0b1522bf7aca561ac4435a05}{co}}
+\begin{DoxyCompactList}\small\item\em The cosine of the orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a74bb8d5c07c4804fa4f6232c8828c4ff}\label{classikg_1_1_pose_a74bb8d5c07c4804fa4f6232c8828c4ff}} 
+int \mbox{\hyperlink{classikg_1_1_pose_a74bb8d5c07c4804fa4f6232c8828c4ff}{pos}}
+\begin{DoxyCompactList}\small\item\em The position of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_abefd9e264722c4238153482cabc6c556}\label{classikg_1_1_pose_abefd9e264722c4238153482cabc6c556}} 
+cv\+::\+Rect2d \mbox{\hyperlink{classikg_1_1_pose_abefd9e264722c4238153482cabc6c556}{r}}
+\begin{DoxyCompactList}\small\item\em The bounding rectangle of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a35885dc4b09fa3f8a011a2b990c26e71}\label{classikg_1_1_pose_a35885dc4b09fa3f8a011a2b990c26e71}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classikg_1_1_pose_a35885dc4b09fa3f8a011a2b990c26e71}{shape}}
+\begin{DoxyCompactList}\small\item\em The shape of the pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a8ab2a38ec090f1d9b652fc7b8a57974b}\label{classikg_1_1_pose_a8ab2a38ec090f1d9b652fc7b8a57974b}} 
+bool \mbox{\hyperlink{classikg_1_1_pose_a8ab2a38ec090f1d9b652fc7b8a57974b}{standing}}
+\begin{DoxyCompactList}\small\item\em Whether the pose is standing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_a6cd1e19755bda3d26616e2211806b7dc}\label{classikg_1_1_pose_a6cd1e19755bda3d26616e2211806b7dc}} 
+bool \mbox{\hyperlink{classikg_1_1_pose_a6cd1e19755bda3d26616e2211806b7dc}{interpolated}}
+\begin{DoxyCompactList}\small\item\em Whether the pose is interpolated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_pose_ad797938d3003f13378a570d6f531f57a}\label{classikg_1_1_pose_ad797938d3003f13378a570d6f531f57a}} 
+bool \mbox{\hyperlink{classikg_1_1_pose_ad797938d3003f13378a570d6f531f57a}{finalized}}
+\begin{DoxyCompactList}\small\item\em Whether the pose is finalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classikg_1_1_pose_a7f29ae59a4cf4220ed744d233e599f4c}{operator$<$$<$}} (std\+::ostream \&out\+Stream, const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&p)
+\begin{DoxyCompactList}\small\item\em Overloaded output stream operator for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D pose with various attributes such as position, orientation, and bounding box. 
+
+The \mbox{\hyperlink{classikg_1_1_pose}{Pose}} class encapsulates the properties and behaviors of a 3D pose, including its position in space, orientation, bounding box, and other attributes. It provides methods for calculating distances between poses, interpolating between poses, and other utility functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classikg_1_1_pose_a01665a043dce83fe1abe9309bf7a0834}\label{classikg_1_1_pose_a01665a043dce83fe1abe9309bf7a0834}} 
+\index{ikg::Pose@{ikg::Pose}!Pose@{Pose}}
+\index{Pose@{Pose}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ikg\+::\+Pose\+::\+Pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The \mbox{\hyperlink{classikg_1_1_pose}{Pose}} to copy from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classikg_1_1_pose_a93084f3b57b84c7a657e5a094388cdd1}\label{classikg_1_1_pose_a93084f3b57b84c7a657e5a094388cdd1}} 
+\index{ikg::Pose@{ikg::Pose}!Pose@{Pose}}
+\index{Pose@{Pose}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ikg\+::\+Pose\+::\+Pose (\begin{DoxyParamCaption}\item[{double}]{x = {\ttfamily 0},  }\item[{double}]{y = {\ttfamily 0},  }\item[{double}]{z = {\ttfamily 0},  }\item[{double}]{time = {\ttfamily 0},  }\item[{int}]{t\+\_\+id = {\ttfamily 0},  }\item[{int}]{p\+\_\+id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+{\em z} & The z-\/coordinate. \\
+\hline
+{\em time} & The time. \\
+\hline
+{\em t\+\_\+id} & The trajectory ID. \\
+\hline
+{\em p\+\_\+id} & The pose ID. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_pose_ad84742d6a5a6d6e966ce765bdc4db947}\label{classikg_1_1_pose_ad84742d6a5a6d6e966ce765bdc4db947}} 
+\index{ikg::Pose@{ikg::Pose}!distance\_in\_2d@{distance\_in\_2d}}
+\index{distance\_in\_2d@{distance\_in\_2d}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{distance\_in\_2d()}{distance\_in\_2d()}}
+{\footnotesize\ttfamily double ikg\+::\+Pose\+::distance\+\_\+in\+\_\+2d (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{a,  }\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculate the 2D distance between two poses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first pose. \\
+\hline
+{\em b} & The second pose. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 2D distance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_pose_a66d85f49a8ba577882fbeb3426dce403}\label{classikg_1_1_pose_a66d85f49a8ba577882fbeb3426dce403}} 
+\index{ikg::Pose@{ikg::Pose}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{interpolate()}{interpolate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classikg_1_1_pose}{Pose}} ikg\+::\+Pose\+::interpolate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p2,  }\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Interpolate between two poses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & The first pose. \\
+\hline
+{\em p2} & The second pose. \\
+\hline
+{\em s} & The interpolation factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated pose. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_pose_aa02c2fc2494eff079215d0d363e89291}\label{classikg_1_1_pose_aa02c2fc2494eff079215d0d363e89291}} 
+\index{ikg::Pose@{ikg::Pose}!interpolate\_heading@{interpolate\_heading}}
+\index{interpolate\_heading@{interpolate\_heading}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{interpolate\_heading()}{interpolate\_heading()}}
+{\footnotesize\ttfamily double ikg\+::\+Pose\+::interpolate\+\_\+heading (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Interpolate the heading between two angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first angle. \\
+\hline
+{\em b} & The second angle. \\
+\hline
+{\em s} & The interpolation factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated heading. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classikg_1_1_pose_a9cd8ca505f31e83241c6c4729cc13e71}\label{classikg_1_1_pose_a9cd8ca505f31e83241c6c4729cc13e71}} 
+\index{ikg::Pose@{ikg::Pose}!operator=@{operator=}}
+\index{operator=@{operator=}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \& ikg\+::\+Pose\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Assignment operator for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The \mbox{\hyperlink{classikg_1_1_pose}{Pose}} to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The assigned \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_pose_a7f29ae59a4cf4220ed744d233e599f4c}\label{classikg_1_1_pose_a7f29ae59a4cf4220ed744d233e599f4c}} 
+\index{ikg::Pose@{ikg::Pose}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ikg::Pose@{ikg::Pose}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out\+Stream,  }\item[{const \mbox{\hyperlink{classikg_1_1_pose}{Pose}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded output stream operator for \mbox{\hyperlink{classikg_1_1_pose}{Pose}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+Stream} & The output stream. \\
+\hline
+{\em p} & The \mbox{\hyperlink{classikg_1_1_pose}{Pose}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/geometries/Pose.\+h\item 
+src/model/geometries/Pose.\+cpp\end{DoxyCompactItemize}

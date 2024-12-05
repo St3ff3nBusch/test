@@ -1,0 +1,415 @@
+Code replacement 
+
+This tool is designed to label 3D bounding boxes in a point cloud with the use of different camera perspectives. It is configured to load the \href{https://data.uni-hannover.de/en/dataset/lumpi}{\texttt{ L\+U\+M\+PI dataset}} and was used in the \href{https://youtu.be/Ns6qsHsb06E}{\texttt{ labeling process}}.\hypertarget{index_autotoc_md1}{}\doxysection{Content}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#installation}{\texttt{ Installation}}
+\item \href{\#usage}{\texttt{ Usage}}
+\item \href{\#adaptation}{\texttt{ Adaptation}}
+\item \href{\#development}{\texttt{ Development}}
+\item \href{\#license}{\texttt{ License}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{Installation}\label{index_autotoc_md2}
+The tool was developed and tested with Ubuntu 20.\+04, and following dependencies\+:
+\begin{DoxyItemize}
+\item \href{https://opencv.org/}{\texttt{ Open\+CV}}
+\item \href{https://pointclouds.org/}{\texttt{ Point Cloud Library}}
+\item \href{https://www.qt.io/}{\texttt{ QT}}
+\end{DoxyItemize}
+
+You could install all dependencies by using the requirements.\+txt\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ xargs -\/a requirements.txt sudo apt-\/get install}
+\end{DoxyCode}
+
+
+Afterwards you could install this software by following these steps\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git clone https://github.com/St3ff3nBusch/LUMPI-\/Labeling}
+\DoxyCodeLine{\$ cd LUMPI-\/Labeling}
+\DoxyCodeLine{\$ mkdir build}
+\DoxyCodeLine{\$ cd build}
+\DoxyCodeLine{\$ cmake ..}
+\DoxyCodeLine{\$ make -\/j<numberOfCompilerThreads>}
+\DoxyCodeLine{\$ ./Labeling}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysection{Usage}\label{index_autotoc_md3}
+The primary purpose of this tool is to correct object tracks in Li\+D\+AR and camera data. Each track assumes a rigid bounding box, and currently, only rotation around the Z-\/axis (yaw/heading) is supported. The tool is preconfigured for the L\+U\+M\+PI dataset and requires the following {\ttfamily file structure}\+:
+
+
+\begin{DoxyItemize}
+\item R\+O\+OT
+\begin{DoxyItemize}
+\item meta.\+json
+\item Measurement$\ast$$\ast$\+Id$\ast$$\ast$
+\begin{DoxyItemize}
+\item lidar
+\begin{DoxyItemize}
+\item 000000.\+ply
+\item ...
+\end{DoxyItemize}
+\item cam
+\begin{DoxyItemize}
+\item {\bfseries{device\+Id}}
+\begin{DoxyItemize}
+\item video.\+mp4
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+An general overview is given in this video \href{https://youtu.be/wgPDjPjT0bk}{\texttt{ tutorial}}.\hypertarget{index_autotoc_md4}{}\doxysection{Quick Start\+: L\+U\+M\+P\+I Test Data}\label{index_autotoc_md4}
+To get started quickly with the L\+U\+M\+PI test data\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Download the \href{https://data.uni-hannover.de:8080/dataset/upload/users/ikg/busch/LUMPI/test_data.zip}{\texttt{ L\+U\+M\+PI test data}}
+\item Press the {\bfseries{Load}} button. ~\newline
+
+\item Choose your {\bfseries{R\+O\+O\+T-\/directory}}. ~\newline
+
+\item Select your {\bfseries{Label.\+csv}} file. ~\newline
+
+\item Enter your {\bfseries{measurement\+Id}}. ~\newline
+
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+
+
+Use the operational tabs to inspect and work with the data\+: ~\newline
+\hypertarget{index_autotoc_md6}{}\doxysubsection{$<$strong$>$\+Global View$<$/strong$>$}\label{index_autotoc_md6}
+ 
+
+
+\begin{DoxyItemize}
+\item Visualize the entire point cloud with its objects in a large point cloud viewer at the top. ~\newline
+
+\item Get a global view of the trajectories at the bottom. ~\newline
+
+\item Interact with objects\+: ~\newline
+
+\begin{DoxyItemize}
+\item {\bfseries{Select objects}}\+: Use Shift + click in the point cloud view or left-\/click in the trajectory view. ~\newline
+
+\item {\bfseries{Add objects}}\+: Click the {\bfseries{add\+Object}} button and pick points in the global view. ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{$<$a href=\char`\"{}\#operatin\+:tab\char`\"{}$>$$<$strong$>$\+Operational View$<$/strong$>$$<$/a$>$}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Visualize a sliding window with multiple views\+: ~\newline
+
+\begin{DoxyItemize}
+\item {\bfseries{Point cloud viewer}} ~\newline
+
+\item {\bfseries{Camera viewer}} ~\newline
+
+\item {\bfseries{Bird’s-\/eye view}} ~\newline
+
+\item {\bfseries{Side view}} ~\newline
+
+\item {\bfseries{Back view}} (from the object’s perspective for each time step) ~\newline
+
+\end{DoxyItemize}
+\item Modify bounding boxes\+: ~\newline
+
+\begin{DoxyItemize}
+\item {\bfseries{Translate position}} ~\newline
+
+\item {\bfseries{Rotate heading}} ~\newline
+
+\end{DoxyItemize}
+\item Use the context menu for additional actions\+: ~\newline
+
+\begin{DoxyItemize}
+\item Interpolation ~\newline
+
+\item Extrapolation ~\newline
+
+\item Mark as standing ~\newline
+
+\item Mark/delete overlapping boxes ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{$<$strong$>$\+Trajectory View$<$/strong$>$}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Inspect the smoothness of your tracks. ~\newline
+
+\item Navigate to pose anomalies by left-\/clicking on a specific pose. ~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{$<$strong$>$\+Global Camera View$<$/strong$>$}\label{index_autotoc_md9}
+ 
+
+
+\begin{DoxyItemize}
+\item Observe the entire scene from different perspectives. ~\newline
+
+\item Select objects by left-\/clicking. ~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{$<$strong$>$\+Model View$<$/strong$>$}\label{index_autotoc_md10}
+\hypertarget{index_autotoc_md11}{}\doxysection{-\/ Inspect the convex hull for the aggregation of all points within the bounding boxes of a track.}\label{index_autotoc_md11}
+\hypertarget{index_autotoc_md12}{}\doxysection{Best Practice}\label{index_autotoc_md12}
+{\bfseries{Summary of best practices for different tasks}} ~\newline
+\hypertarget{index_autotoc_md13}{}\doxysubsection{Track Extension}\label{index_autotoc_md13}
+How to start labeling your sensor data or extend your labels with new object tracks. ~\newline
+ For our recommendations on efficiently adding new tracks, watch this \href{https://youtu.be/4CFBQkpRbls}{\texttt{ tutorial}}. ~\newline
+
+
+
+\begin{DoxyItemize}
+\item Split existing tracks by clicking {\bfseries{split}} and defining an offset to the existing track. ~\newline
+
+\begin{DoxyItemize}
+\item Add track with astatic offset in front, behind, left or right of a track with identically bounding box dimension.
+\item Split a too big bounding box into two separate parallel moving objects.
+\end{DoxyItemize}
+\item Add new objects\+: ~\newline
+
+\begin{DoxyItemize}
+\item Add objects when they enter the scene. ~\newline
+
+\item Jump to the point cloud index where they exit the scene and extrapolate the track. ~\newline
+
+\item Interpolate the track. ~\newline
+
+\item Go to an index between entry and exit, correct the pose, and interpolate again. ~\newline
+
+\item Gradually reduce the step size. ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsection{Correction}\label{index_autotoc_md14}
+How to correct tracking errors, track losses, identity switches, and pose jittering for stationary objects. ~\newline
+ For our recommendations on efficiently fixing tracks, watch this \href{https://youtu.be/CB34H1LOCZo}{\texttt{ tutorial}}. ~\newline
+
+
+
+\begin{DoxyItemize}
+\item Select the track you want to edit in the {\bfseries{Global}} or {\bfseries{Camera}} tab. ~\newline
+
+\item Switch to the {\bfseries{Operation}} tab and begin with a high step size. We recommend\+: ~\newline
+
+\begin{DoxyItemize}
+\item {\bfseries{Step size 10}} for vehicles (1 second). ~\newline
+
+\item {\bfseries{Step size 20}} for bicycles (2 second). ~\newline
+
+\item {\bfseries{Step size 50}} for pedestrians (5 second). ~\newline
+
+\item Increase the step size if the object is stationary. ~\newline
+
+\end{DoxyItemize}
+\item Review the entire track, focusing on the first and last pose\+: ~\newline
+
+\begin{DoxyItemize}
+\item If the track is too short, extrapolate it until the object is no longer identifiable in the point cloud. ~\newline
+
+\item If the track is too long or identity switches occurred, use the split option to shorten it. ~\newline
+
+\end{DoxyItemize}
+\item Adjust the box dimensions\+: ~\newline
+
+\begin{DoxyItemize}
+\item Begin at an index where the object is clearly visible. ~\newline
+
+\item Verify the dimension size across the entire track, considering the time offset between points. ~\newline
+
+\end{DoxyItemize}
+\item After defining the box size, start pose correction in the {\bfseries{Operation}} tab\+: ~\newline
+
+\begin{DoxyItemize}
+\item Start with a higher step size, interpolate the track, then gradually reduce the step size until the desired frequence is reached. ~\newline
+
+\item Use interpolation whenever possible. ~\newline
+
+\item Mark stationary intervals by clicking $\ast$$\ast${\ttfamily set standing}$\ast$$\ast$. ~\newline
+
+\item Adjust the box in bird’s-\/eye, side, or back views. ~\newline
+
+\item Align the heading first for accurate position determination. ~\newline
+
+\end{DoxyItemize}
+\item Check the {\bfseries{Trajectory}} tab for inconsistencies, selecting your desired step size. ~\newline
+
+\item Generate the image mask by aggregating the points of your track\+: ~\newline
+
+\begin{DoxyItemize}
+\item Click $\ast$$\ast${\ttfamily generate model}$\ast$$\ast$ (choose suitable start/end indices and step size; this may take time). ~\newline
+
+\end{DoxyItemize}
+\item Verify the bounding box and mask in the {\bfseries{Camera}} tab. ~\newline
+
+\item Review multiple objects and longer sequences by saving a video\+: ~\newline
+
+\begin{DoxyItemize}
+\item Click $\ast$$\ast${\ttfamily generate video}$\ast$$\ast$ (choose an appropriate interval and frame rate). 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysection{Adaptation}\label{index_autotoc_md15}
+Feel free to adapt the code to suit your specific requirements and data. Below, we outline simple modifications to customize the tool\+: ~\newline
+\hypertarget{index_autotoc_md16}{}\doxysubsection{Sliding Window\+: Count and Width}\label{index_autotoc_md16}
+To change the size of the sliding window and adjust the number of columns in the operational view\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Modify the $\ast$$\ast${\ttfamily sliding\+Window}$\ast$$\ast$ variable to set the desired number of columns. ~\newline
+
+\begin{DoxyItemize}
+\item Note\+: Adjusting this variable does not change the column width. If the content exceeds the available space, a scroll bar will be added automatically. ~\newline
+
+\end{DoxyItemize}
+\item To adjust the column width, modify the $\ast$$\ast${\ttfamily column\+View\+Size}$\ast$$\ast$ variable. ~\newline
+
+\begin{DoxyItemize}
+\item This variable dynamically adapts based on the main window size. ~\newline
+
+\item For further customization, review the {\ttfamily set\+\_\+model\+\_\+view\+\_\+dimensions()} method in the {\ttfamily Labeling\+Presenter} class. ~\newline
+ $<$details$>$
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void LabelingPresenter::set\_model\_view\_dimensions() \{}
+\DoxyCodeLine{    model.singleTrajectoryWidth = view-\/>width() / 6. * 5;\# A sixth of the window width is reserved for the operation button panel.}
+\DoxyCodeLine{    model.singleTrajectoryHeight = view-\/>height();}
+\DoxyCodeLine{    model.globalTrajectoryWidth = view-\/>width() / 6. * 5;}
+\DoxyCodeLine{    model.globalTrajectoryHeight = view-\/>height() / 3;}
+\DoxyCodeLine{    model.rowViewSize = view-\/>height() / 6.;}
+\DoxyCodeLine{    model.columViewSize = view-\/>width() / 6.;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+$<$/details$>$\hypertarget{index_autotoc_md17}{}\doxysubsection{Point Cloud Input}\label{index_autotoc_md17}
+To use different point cloud data, simply modify the $\ast$$\ast${\ttfamily get\+\_\+cloud(int)}$\ast$$\ast$ method by replacing the parsing line with your custom point cloud parser\+: ~\newline
+ $<$details$>$
+
+Code replacement 
+
+~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Labeling.cpp Line 532:}
+\DoxyCodeLine{-\/-\/-\/   tmpCloud.second= Parser::load\_cloud\_ikg\_benchmark(ss.str());}
+\DoxyCodeLine{}
+\DoxyCodeLine{    /* Example: replace the loading method with the following code to load a mobile mapping cloud from the institute for Cartography and Geoinformatics:}
+\DoxyCodeLine{    tmpCloud.second= Parser::load\_cloud\_ikg\_mobile\_mapping("../mobile\_mapping/003.ply");}
+\DoxyCodeLine{    cv::Point3d center(0,0,0);}
+\DoxyCodeLine{    for(auto\&p:tmpCloud.second)\{}
+\DoxyCodeLine{        center.x+=p.x;}
+\DoxyCodeLine{        center.y+=p.y;}
+\DoxyCodeLine{        center.z+=p.z;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    center/=(double)tmpCloud.second.size();}
+\DoxyCodeLine{    for(auto \&p:tmpCloud.second)\{}
+\DoxyCodeLine{        p.x-\/=center.x;}
+\DoxyCodeLine{        p.y-\/=center.y;}
+\DoxyCodeLine{        p.z-\/=center.z;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    */}
+\end{DoxyCode}
+
+
+$<$/details$>$ The Parser.\+cpp class should give you some insperatin of how to write your own point cloud parser. The core functionality is given also for only X\+YZ information. If you want to change the index scheme, have a closer look to this method. ~\newline
+\hypertarget{index_autotoc_md18}{}\doxysubsection{Camera Input}\label{index_autotoc_md18}
+We recommend using cameras, especially in crowded scenes, where identity switches can be challenging to detect using point clouds alone. ~\newline
+
+
+To incorporate camera data, the extrinsic and intrinsic parameters for each camera perspective must be known. The Li\+D\+AR frame serves as the main coordinate frame, and all labels will also be saved in this frame. Camera images are loaded as one video per camera, following the expected \href{\#structure}{\texttt{ file structure}}. ~\newline
+
+
+The camera metadata is loaded from the {\ttfamily meta.\+json} file, which should include the following information\+: ~\newline
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\+Experiment/\+Measurement ID ({\ttfamily experiment\+Id})$\ast$$\ast$\+: Identifies the correct subfolder within your {\bfseries{R\+O\+OT}} directory. ~\newline
+
+\item $\ast$$\ast$\+Camera Device ID ({\ttfamily device\+Id})$\ast$$\ast$\+: Specifies and locates the corresponding video. ~\newline
+
+\item $\ast$$\ast$\+Camera Intrinsics ({\ttfamily intrinsic})$\ast$$\ast$\+: A 3x3 matrix representing the camera’s intrinsic parameters. ~\newline
+
+\item $\ast$$\ast$\+Camera Rotation ({\ttfamily rvec})$\ast$$\ast$\+: A 3x1 vector defining the rotation from the Li\+D\+AR to the camera. ~\newline
+
+\item $\ast$$\ast$\+Camera Translation ({\ttfamily tvec})$\ast$$\ast$\+: A 3x1 vector defining the translation from the Li\+D\+AR to the camera. ~\newline
+
+\item $\ast$$\ast$\+Camera Distortion ({\ttfamily distortion})$\ast$$\ast$\+: A 4x1 vector accounting for lens distortion. ~\newline
+
+\item $\ast$$\ast$\+Camera Frames Per Second ({\ttfamily fps})$\ast$$\ast$\+: Used for time synchronization. ~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsection{Time Synchronization}\label{index_autotoc_md19}
+For time synchronization purposes, it is assumed that all videos start simultaneously. To synchronize the Li\+D\+AR data with the videos, point clouds are stored with a continuous index, represented by filenames with leading zeros.
+
+The highest accuracy is achieved by using a timestamp for each scanned point, allowing precise alignment of the point cloud with the camera data. A per-\/point timestamp is used to subsample the point cloud, enabling more accurate determination of pose timestamps and improved interpolation of labels into the camera frames. This is particularly crucial if you intend to use Li\+D\+AR data to generate training datasets for camera-\/based detection. Therefore, we strongly recommend using a timestamp for each point.
+
+If you choose to use this tool without per-\/point timestamps, you must disable pose time adaptation in the modeling process as well as heat map coloring in the bird’s-\/eye, side, and back views. To do this, modify the methods {\ttfamily generate\+\_\+back\+\_\+view(int,int)}, {\ttfamily generate\+\_\+top\+\_\+view(int,int)}, and {\ttfamily generate\+\_\+side\+\_\+view(int,int)} by removing the time collection loop\+:
+
+$<$details$>$
+
+Code replacement 
+
+~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/-\/ cv::Mat times(within.size(), 1, CV\_64F, cv::Scalar(0));}
+\DoxyCodeLine{-\/-\/-\/     for (int i = 0; i < within.size(); i++) \{}
+\DoxyCodeLine{-\/-\/-\/         times.at<double>(i, 0) = within[i].adjustedtime;}
+\DoxyCodeLine{-\/-\/-\/     \}}
+\DoxyCodeLine{-\/-\/-\/       auto heat = ikg::Plotter::get\_heat\_map(times);}
+\DoxyCodeLine{....}
+\DoxyCodeLine{....}
+\DoxyCodeLine{-\/-\/-\/    cv::circle(tv, p3, pointSize, heat.at<cv::Vec3b>(i, 0), -\/1);}
+\DoxyCodeLine{+++     cv::circle(tv, p3, pointSize, cv::Scalar(0,255,0), -\/1);}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+Finally delete the time adaption in the {\ttfamily aggregate\+\_\+points(...)} method\+: $<$details$>$
+
+Code replacement 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/-\/         times.push\_back(pc.points[i].adjustedtime);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{-\/-\/-\/     double th = 0.01 * sec2msec;}
+\DoxyCodeLine{-\/-\/-\/     sort(times.begin(), times.end());}
+\DoxyCodeLine{-\/-\/-\/     vector<vector<double>> segments(1);}
+\DoxyCodeLine{-\/-\/-\/     segments.back().push\_back(times.front());}
+\DoxyCodeLine{-\/-\/-\/     for (int i = 1; i < times.size(); i++) \{}
+\DoxyCodeLine{-\/-\/-\/         if (times[i] -\/ times[i -\/ 1] > th) \{}
+\DoxyCodeLine{-\/-\/-\/             segments.push\_back(vector<double>());}
+\DoxyCodeLine{-\/-\/-\/         \}}
+\DoxyCodeLine{-\/-\/-\/         segments.back().push\_back(times[i]);}
+\DoxyCodeLine{-\/-\/-\/     \}}
+\DoxyCodeLine{-\/-\/-\/sort(segments.begin(), segments.end(), [](auto const \&a, auto const \&b) \{}
+\DoxyCodeLine{-\/-\/-\/         return a.size() > b.size();}
+\DoxyCodeLine{-\/-\/-\/     \});}
+\DoxyCodeLine{-\/-\/-\/     p.time = accumulate(segments.front().begin(), segments.front().end(), 0.) / (double) segments.front().size()*msec2sec;}
+\DoxyCodeLine{-\/-\/-\/     p.visibility=times.size();}
+\end{DoxyCode}
+
+
+$<$/details$>$\hypertarget{index_autotoc_md20}{}\doxysection{Development}\label{index_autotoc_md20}
+The code of this tool follows the Model-\/\+View-\/\+Controller pattern, check the \href{docs/html/index.html}{\texttt{ documentation}} for more details.
+
+The easiest way to extend the functionality is to add a new button in the \href{include/view/LabelingView.h}{\texttt{ Labeling\+View}} and connect it to your own function via the \href{include/presenter/LabelingPresenter.h}{\texttt{ Labeling\+Presenter}}
+
+For extension of the context menu to add functionality for a single time index at the operational view, add Q\+Action with the {\bfseries{context\+\_\+menu\+\_\+view\+\_\+table}} method.
+
+If you are interested in the development of this tool please contact \href{mailto:steffen.busch@ikg.uni-hannover.de}{\texttt{ me}}.\hypertarget{index_autotoc_md21}{}\doxysection{License}\label{index_autotoc_md21}
+This project is dual-\/licensed under the following licenses\+:\hypertarget{index_autotoc_md22}{}\doxysubsection{Public License}\label{index_autotoc_md22}
+This project is licensed under the G\+NU Affero General Public License (A\+G\+P\+Lv3). You can redistribute it and/or modify it under the terms of the G\+NU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+For more details, see the \mbox{[}L\+I\+C\+E\+N\+S\+E-\/\+A\+G\+P\+Lv3\mbox{]}(L\+I\+C\+E\+N\+S\+E-\/\+A\+G\+P\+Lv3) file or visit \href{https://www.gnu.org/licenses/agpl-3.0.html}{\texttt{ https\+://www.\+gnu.\+org/licenses/agpl-\/3.\+0.\+html}}.\hypertarget{index_autotoc_md23}{}\doxysubsection{Commercial License}\label{index_autotoc_md23}
+For commercial use, please contact the project authors to obtain a commercial license. The commercial license allows you to use the project in proprietary software and provides additional benefits such as support and maintenance.
+
+For inquiries regarding the commercial license, please contact \href{mailto:steffen.busch@ikg.uni-hannover.de}{\texttt{ me}}. 
