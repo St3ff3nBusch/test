@@ -95,7 +95,7 @@ Use the operational tabs to inspect and work with the data:
 
 ### **Global Camera View**  
 <p float="left">
-  <img src="https://raw.githubusercontent.com/St3ff3nBusch/tst/main/images/camera_view.png" alt="Operational View" >
+  <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/camera_view.png" alt="Operational View" >
 </p>
 
 - Observe the entire scene from different perspectives.  
