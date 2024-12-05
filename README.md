@@ -1,6 +1,7 @@
 # LUMPI Labeling Tool
 <span id="operatin:tab"></span>
 <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/operational_view.png" alt="Operational View" style="max-width: 500px; height: auto;">
+
 This tool is designed to label 3D bounding boxes in a point cloud with the use of different camera perspectives.
 It is configured to load the [LUMPI dataset](https://data.uni-hannover.de/en/dataset/lumpi)  and was used in the [labeling process](https://youtu.be/Ns6qsHsb06E).
 
@@ -63,9 +64,7 @@ To get started quickly with the LUMPI test data:
 Use the operational tabs to inspect and work with the data:  
 
 ### **Global View**  
-<p float="left">
   <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/global_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
-</p>
 
 - Visualize the entire point cloud with its objects in a large point cloud viewer at the top.  
 - Get a global view of the trajectories at the bottom.  
@@ -94,9 +93,9 @@ Use the operational tabs to inspect and work with the data:
 - Navigate to pose anomalies by left-clicking on a specific pose.  
 
 ### **Global Camera View**  
-<p float="left">
+
   <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/camera_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
-</p>
+
 
 - Observe the entire scene from different perspectives.  
 - Select objects by left-clicking.  
