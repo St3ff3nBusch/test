@@ -1,6 +1,6 @@
 # LUMPI Labeling Tool
 <span id="operatin:tab"></span>
-<img src="https://raw.githubusercontent.com/St3ff3nBusch/images/operational_view.png" alt="Operational View" style="float: left;">
+<img src="[https://raw.githubusercontent.com/St3ff3nBusch/images/operational_view.png](https://raw.githubusercontent.com/St3ff3nBusch/test/main)" alt="Operational View" style="float: left;">
 This tool is designed to label 3D bounding boxes in a point cloud with the use of different camera perspectives.
 It is configured to load the [LUMPI dataset](https://data.uni-hannover.de/en/dataset/lumpi)  and was used in the [labeling process](https://youtu.be/Ns6qsHsb06E).
 
