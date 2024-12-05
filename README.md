@@ -1,6 +1,5 @@
 # LUMPI Labeling Tool
-<a name="operational-view"></a>
-<img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/operational_view.png" alt="Operational View" style="max-width: 500px; height: auto;" id="operatin:tab">
+<img id="operational-view" src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/operational_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
 
 
 This tool is designed to label 3D bounding boxes in a point cloud with the use of different camera perspectives.
@@ -73,7 +72,7 @@ Use the operational tabs to inspect and work with the data:
   - **Select objects**: Use Shift + click in the point cloud view or left-click in the trajectory view.  
   - **Add objects**: Click the **addObject** button and pick points in the global view.  
 
-### [Operational View](#operatin:tab)
+### [Operational View](#operational-view)
 - Visualize a sliding window with multiple views:  
   - **Point cloud viewer**  
   - **Camera viewer**  
