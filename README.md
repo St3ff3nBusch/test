@@ -63,7 +63,7 @@ To get started quickly with the LUMPI test data:
 
 Use the operational tabs to inspect and work with the data:  
 
-### **Global View**  
+### Global View  
   <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/global_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
 
 - Visualize the entire point cloud with its objects in a large point cloud viewer at the top.  
@@ -72,7 +72,7 @@ Use the operational tabs to inspect and work with the data:
   - **Select objects**: Use Shift + click in the point cloud view or left-click in the trajectory view.  
   - **Add objects**: Click the **addObject** button and pick points in the global view.  
 
-### [**Operational View**](#operatin:tab)
+### [Operational View](#operatin:tab)
 - Visualize a sliding window with multiple views:  
   - **Point cloud viewer**  
   - **Camera viewer**  
@@ -88,11 +88,11 @@ Use the operational tabs to inspect and work with the data:
   - Mark as standing  
   - Mark/delete overlapping boxes  
 
-### **Trajectory View**  
+### Trajectory View
 - Inspect the smoothness of your tracks.  
 - Navigate to pose anomalies by left-clicking on a specific pose.  
 
-### **Global Camera View**  
+### Global Camera View 
 
   <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/camera_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
 
@@ -100,8 +100,9 @@ Use the operational tabs to inspect and work with the data:
 - Observe the entire scene from different perspectives.  
 - Select objects by left-clicking.  
 
-### **Model View**  
-- Inspect the convex hull for the aggregation of all points within the bounding boxes of a track.  
+### Model View 
+- Inspect the convex hull for the aggregation of all points within the bounding boxes of a track.
+  
 ---
 
 
