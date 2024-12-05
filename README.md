@@ -1,5 +1,5 @@
 # LUMPI Labeling Tool
-<img id="operational-view" src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/operational_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
+<img id="operational-view" src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/operational_view.png" alt="Operational View" style="max-width: 1080px; height: auto;" >
 
 
 This tool is designed to label 3D bounding boxes in a point cloud with the use of different camera perspectives.
@@ -64,7 +64,7 @@ To get started quickly with the LUMPI test data:
 Use the operational tabs to inspect and work with the data:  
 
 ### Global View  
-  <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/global_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
+  <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/global_view.png" alt="Operational View" style="max-width: 1080px; height: auto;" >
 
 - Visualize the entire point cloud with its objects in a large point cloud viewer at the top.  
 - Get a global view of the trajectories at the bottom.  
@@ -94,7 +94,7 @@ Use the operational tabs to inspect and work with the data:
 
 ### Global Camera View 
 
-  <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/camera_view.png" alt="Operational View" style="max-width: 500px; height: auto;" >
+  <img src="https://raw.githubusercontent.com/St3ff3nBusch/test/main/images/camera_view.png" alt="Operational View" style="max-width: 1080px; height: auto;" >
 
 
 - Observe the entire scene from different perspectives.  
