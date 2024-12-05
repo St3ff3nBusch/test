@@ -1,0 +1,114 @@
+\hypertarget{classikg_1_1_sensor}{}\doxysection{ikg\+::Sensor Class Reference}
+\label{classikg_1_1_sensor}\index{ikg::Sensor@{ikg::Sensor}}
+
+
+Class representing a sensor with various attributes.  
+
+
+
+
+{\ttfamily \#include $<$Structs\+And\+More.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a06a0fb26d299f3b7381ac35537594bd4}\label{classikg_1_1_sensor_a06a0fb26d299f3b7381ac35537594bd4}} 
+\mbox{\hyperlink{classikg_1_1_sensor_a06a0fb26d299f3b7381ac35537594bd4}{Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classikg_1_1_sensor_ac85afdf3ef32cc7fd8cc0a5c6eebdbd5}{Sensor}} (const \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \&s)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \& \mbox{\hyperlink{classikg_1_1_sensor_a05cc7c4cb06ed578e0796473632586d9}{operator=}} (const \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \&s)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a276a9900e2c8e1005fdb6a1228ea0cd4}\label{classikg_1_1_sensor_a276a9900e2c8e1005fdb6a1228ea0cd4}} 
+int \mbox{\hyperlink{classikg_1_1_sensor_a276a9900e2c8e1005fdb6a1228ea0cd4}{session\+Id}}
+\begin{DoxyCompactList}\small\item\em Session ID of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a6c86f307df8371ad4961be9113a716ba}\label{classikg_1_1_sensor_a6c86f307df8371ad4961be9113a716ba}} 
+int \mbox{\hyperlink{classikg_1_1_sensor_a6c86f307df8371ad4961be9113a716ba}{exp\+Id}}
+\begin{DoxyCompactList}\small\item\em Experiment ID associated with the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a54b5da30a178c24327b38e625dda422c}\label{classikg_1_1_sensor_a54b5da30a178c24327b38e625dda422c}} 
+int \mbox{\hyperlink{classikg_1_1_sensor_a54b5da30a178c24327b38e625dda422c}{device\+Id}}
+\begin{DoxyCompactList}\small\item\em Device ID of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_aebae7015914a8b0223dac2d3b3a7a146}\label{classikg_1_1_sensor_aebae7015914a8b0223dac2d3b3a7a146}} 
+std\+::string \mbox{\hyperlink{classikg_1_1_sensor_aebae7015914a8b0223dac2d3b3a7a146}{type}}
+\begin{DoxyCompactList}\small\item\em Type of the sensor (e.\+g., camera, lidar). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a983668d0e72965ff4c0904e2804a481e}\label{classikg_1_1_sensor_a983668d0e72965ff4c0904e2804a481e}} 
+cv\+::\+Mat \mbox{\hyperlink{classikg_1_1_sensor_a983668d0e72965ff4c0904e2804a481e}{extrinsic}}
+\begin{DoxyCompactList}\small\item\em Extrinsic matrix for the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a9fca32477fe9fc96db19241a0c44584e}\label{classikg_1_1_sensor_a9fca32477fe9fc96db19241a0c44584e}} 
+cv\+::\+Mat \mbox{\hyperlink{classikg_1_1_sensor_a9fca32477fe9fc96db19241a0c44584e}{intrinsic}}
+\begin{DoxyCompactList}\small\item\em Intrinsic matrix for the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a5dd45786314a6d9ec8df54a0bf39871f}\label{classikg_1_1_sensor_a5dd45786314a6d9ec8df54a0bf39871f}} 
+cv\+::\+Mat \mbox{\hyperlink{classikg_1_1_sensor_a5dd45786314a6d9ec8df54a0bf39871f}{distortion}}
+\begin{DoxyCompactList}\small\item\em Distortion coefficients for the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_afc7a54659b92f785deade08a15881904}\label{classikg_1_1_sensor_afc7a54659b92f785deade08a15881904}} 
+cv\+::\+Mat \mbox{\hyperlink{classikg_1_1_sensor_afc7a54659b92f785deade08a15881904}{tvec}}
+\begin{DoxyCompactList}\small\item\em Translation vector of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_ae45f89e0fb87e1ab3c53339596581a7d}\label{classikg_1_1_sensor_ae45f89e0fb87e1ab3c53339596581a7d}} 
+cv\+::\+Mat \mbox{\hyperlink{classikg_1_1_sensor_ae45f89e0fb87e1ab3c53339596581a7d}{rvec}}
+\begin{DoxyCompactList}\small\item\em Rotation vector of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_af1d5196a056484760818fafc4358f352}\label{classikg_1_1_sensor_af1d5196a056484760818fafc4358f352}} 
+\mbox{\hyperlink{classfrustum_1_1_frustum}{frustum\+::\+Frustum}} \mbox{\hyperlink{classikg_1_1_sensor_af1d5196a056484760818fafc4358f352}{frustum}}
+\begin{DoxyCompactList}\small\item\em Frustum object representing the sensor\textquotesingle{}s field of view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a7a02441e6cce7ff4ab0e0ffda298a797}\label{classikg_1_1_sensor_a7a02441e6cce7ff4ab0e0ffda298a797}} 
+double \mbox{\hyperlink{classikg_1_1_sensor_a7a02441e6cce7ff4ab0e0ffda298a797}{fps}}
+\begin{DoxyCompactList}\small\item\em Frames per second rate of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a6b2fc627ab3095b38de8ac0fe8de7078}\label{classikg_1_1_sensor_a6b2fc627ab3095b38de8ac0fe8de7078}} 
+double \mbox{\hyperlink{classikg_1_1_sensor_a6b2fc627ab3095b38de8ac0fe8de7078}{start\+Time}}
+\begin{DoxyCompactList}\small\item\em Start time of the sensor\textquotesingle{}s operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a0aa42276a5bdd592429ad47a308d6412}\label{classikg_1_1_sensor_a0aa42276a5bdd592429ad47a308d6412}} 
+double \mbox{\hyperlink{classikg_1_1_sensor_a0aa42276a5bdd592429ad47a308d6412}{horizontal\+Resolution}}
+\begin{DoxyCompactList}\small\item\em Horizontal resolution of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classikg_1_1_sensor_a2d3ebd3f87717eff2b2db72152d95d9f}\label{classikg_1_1_sensor_a2d3ebd3f87717eff2b2db72152d95d9f}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classikg_1_1_sensor_a2d3ebd3f87717eff2b2db72152d95d9f}{angles}}
+\begin{DoxyCompactList}\small\item\em Vector of angles related to the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a sensor with various attributes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classikg_1_1_sensor_ac85afdf3ef32cc7fd8cc0a5c6eebdbd5}\label{classikg_1_1_sensor_ac85afdf3ef32cc7fd8cc0a5c6eebdbd5}} 
+\index{ikg::Sensor@{ikg::Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!ikg::Sensor@{ikg::Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily ikg\+::\+Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} object to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classikg_1_1_sensor_a05cc7c4cb06ed578e0796473632586d9}\label{classikg_1_1_sensor_a05cc7c4cb06ed578e0796473632586d9}} 
+\index{ikg::Sensor@{ikg::Sensor}!operator=@{operator=}}
+\index{operator=@{operator=}!ikg::Sensor@{ikg::Sensor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \& ikg\+::\+Sensor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} object to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned \mbox{\hyperlink{classikg_1_1_sensor}{Sensor}} object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model/Structs\+And\+More.\+h\item 
+src/model/Structs\+And\+More.\+cpp\end{DoxyCompactItemize}
